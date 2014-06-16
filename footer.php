@@ -73,6 +73,7 @@
 <?php wp_footer(); ?>
 
  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/min/master.min.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
 
 
 </body>
