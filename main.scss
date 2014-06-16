@@ -1,0 +1,440 @@
+body {
+	background: #000 !important;
+}
+
+#branding .headerCentered {
+	position: relative;
+}
+
+.headerbgBlur, .headertransition {
+		display: none;
+}
+
+.home .headerPhotoBg {
+	z-index: 1 !important;
+}
+
+.home div.contrastmask2 {
+	bottom: 0px;
+}
+
+div.contrastmask2 {
+	bottom: 10px;
+	height: 200px;
+	z-index:2;
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+
+.outlinebox {
+	border: 1px solid rgba(255,255,255,0.7);
+	padding: 2em;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	color: #fff;
+}
+
+#access ul {
+	float: right;
+}
+
+#access {
+	float: none;
+	position: absolute;
+	top: 40px;
+	right: 0px;
+	box-shadow: none !important;
+	width: 50% !important;
+	z-index:3;
+}
+
+.logoImage {
+	display: block;
+	width: 45%;
+}
+
+.logoImage img {
+	width: 100%;
+}
+
+.headeroverlay, nav {
+	background: transparent !important;
+
+}
+
+nav#access ul li a:link, nav#access ul li a:visited {
+	color: rgba(255,255,255,0.9);
+	border: 1px solid rgba(255,255,255,0.0);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+nav#access ul li a:hover {
+	border: 1px solid rgba(255,255,255,0.8);
+	background: transparent;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+nav#access ul li {
+	margin-right: 1em;
+	margin-bottom: 0.4em;
+}
+
+nav#access .current_page_item>a:link, nav#access .current_page_item>a:visited {
+	background: transparent !important;
+	border: 1px solid rgba(255,255,255,0.8);
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+div.navWrapper .menu {
+	padding-right: 0px;
+}
+
+.collegeFeature .slideBlur {
+	overflow: visible !important;
+	background: transparent !important;
+}
+
+.collegeFeature .slideBlurImage {
+	margin: auto !important;
+	height: 100% !important;
+	background-position: 0% 0% !important;
+	-moz-mask-image: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 34%, rgba(0,0,0,1) 63%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+-webkit-mask-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(34%,rgba(0,0,0,0)), color-stop(63%,rgba(0,0,0,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+-webkit-mask-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,1) 63%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+-o-mask-image: -o-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,1) 63%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+—ms-mask-image: -ms-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,1) 63%,rgba(0,0,0,1) 100%); /* IE10+ */
+mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,1) 63%,rgba(0,0,0,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+}
+
+.collegeFeature .slideImage, .collegeFeature li, .collegeFeature ul, .collegeFeature {
+	height: 600px !important;
+}
+
+.home #content {
+	background: transparent !important;
+	box-shadow: none !important;
+	padding: 0px !important;
+	color: #fff;
+	min-height: 0px !important;
+}
+
+.headerPhotoBg, .collegeFeature {
+	height: 600px !important;
+}
+
+.home .collegeFeature li .featureCaption, .home .iosSlider .featureCaption {
+	bottom: 300px !important;
+	text-align: center;
+}
+
+.collegeFeature li .featureCaption h2, .iosSlider h2 {
+	font-family: "Raleway" !important;
+	-webkit-font-smoothing: subpixel-antialiased !important;
+}
+
+.featuresubtitle {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+
+#access .globalSearch {
+	top: -58px;
+	right: 0px;
+	width: 206px;
+	height: 40px;
+
+	z-index:15;
+
+}
+
+#branding #access #searchform {
+	right: 0px;
+	border-left: none;
+
+
+}
+
+.navWrapper {
+	margin-right: -1em;
+}
+
+footer div.inner {
+		padding-top: 80px;
+}
+
+#branding #access #s {
+	border-left: none;
+	width: 70px;
+	padding-top: 10px;
+	padding-bottom: 8px;
+}
+
+#branding #access #s {
+	background-color: rgba(255,255,255,0.2);
+	-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+	-webkit-transition: 0.4s;
+	-moz-transition: 0.4s;
+	transition: 0.4s;
+}
+
+#branding #access #s:focus {
+	border-left: none;
+	width: 200px;
+	background-color: rgba(255,255,255,0.6);
+	-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+-webkit-transition: 0.4s;
+-moz-transition: 0.4s;
+transition: 0.4s;
+}
+
+nav#access .filtered ul li a:link, nav#access .filtered ul li a:visited {
+	color: rgba(0,0,0,0.8);
+}
+
+
+
+/**  Child them styles **/
+
+/*#access .navWrapper .menu {
+	padding-right: 0px;
+}
+
+#access .globalSearch {
+	top: -60px;
+	right: 0px;
+	width: 206px;
+	height: 40px;
+
+	z-index:15;
+
+}
+
+#branding #access #searchform {
+	right: 0px;
+	border-left: none;
+	background: rgba(255,255,255,0.6);
+	-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+border-radius: 3px;
+}
+
+#branding #access #s {
+	border-left: none;
+	width: 70px;
+}
+
+#branding #access #s:focus {
+	border-left: none;
+	width: 200px;
+}
+
+
+
+div.headerPhotoBg {
+	z-index:1;
+}
+
+ul.slides:after {
+	display: none;
+	content: none;
+}
+
+.home .events-table {
+	color: #fff;
+}
+
+.home .events-table a {
+
+color: #deb846;
+line-height: 1.4em;
+font-size: 14px;
+
+}
+
+.home .events-table tr td {
+	padding-top: 1em;
+}
+
+.home .events-table thead tr th {
+	font-weight: bold;
+}
+
+
+
+.boxContent h3.spotlight_title_small {
+	font-size: 14px;
+	margin-top: 0.5em;
+	padding-top: 0.5em;
+	border-top: 1px solid rgba(255,255,255,0.4);
+}
+
+.box.videos img {
+	margin-top: -70px;
+	height: 180% !important;
+	width: auto !important;
+}
+
+footer#colophon .inner .copyright {
+	margin-top: 20px;
+}
+
+footer#colophon .socialRef {
+	margin-top: 80px;
+}
+
+.single #content.fullWidth {
+	width: 940px;
+}
+
+
+/*** ICON FONTS FOR WEATHER ***/
+
+/*@font-face {
+		font-family: 'weather';
+		src: url('https://dl.dropboxusercontent.com/u/2086809/weatherfont/artill_clean_icons-webfont.eot');
+		src: url('https://dl.dropboxusercontent.com/u/2086809/weatherfont/artill_clean_icons-webfont.eot?#iefix') format('embedded-opentype'),
+				url('https://dl.dropboxusercontent.com/u/2086809/weatherfont/artill_clean_icons-webfont.woff') format('woff'),
+				url('https://dl.dropboxusercontent.com/u/2086809/weatherfont/artill_clean_icons-webfont.ttf') format('truetype'),
+				url('https://dl.dropboxusercontent.com/u/2086809/weatherfont/artill_clean_icons-webfont.svg#artill_clean_weather_iconsRg') format('svg');
+		font-weight: normal;
+		font-style: normal;
+}
+
+
+
+#weather {
+
+	position: relative;
+	margin: 0 auto;
+	margin-top: -220px;
+	padding-right: 2em;
+	z-index:50;
+
+	text-align: right;
+	text-transform: uppercase;
+}
+
+#weather i {
+	color: #fff;
+	font-family: weather !important;
+	font-size: 34px !important;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1.0;
+}
+
+.icon-0:before { content: ":"; }
+.icon-1:before { content: "p"; }
+.icon-2:before { content: "S"; }
+.icon-3:before { content: "Q"; }
+.icon-4:before { content: "S"; }
+.icon-5:before { content: "W"; }
+.icon-6:before { content: "W"; }
+.icon-7:before { content: "W"; }
+.icon-8:before { content: "W"; }
+.icon-9:before { content: "I"; }
+.icon-10:before { content: "W"; }
+.icon-11:before { content: "I"; }
+.icon-12:before { content: "I"; }
+.icon-13:before { content: "I"; }
+.icon-14:before { content: "I"; }
+.icon-15:before { content: "W"; }
+.icon-16:before { content: "I"; }
+.icon-17:before { content: "W"; }
+.icon-18:before { content: "U"; }
+.icon-19:before { content: "Z"; }
+.icon-20:before { content: "Z"; }
+.icon-21:before { content: "Z"; }
+.icon-22:before { content: "Z"; }
+.icon-23:before { content: "Z"; }
+.icon-24:before { content: "E"; }
+.icon-25:before { content: "E"; }
+.icon-26:before { content: "3"; }
+.icon-27:before { content: "a"; }
+.icon-28:before { content: "A"; }
+.icon-29:before { content: "a"; }
+.icon-30:before { content: "A"; }
+.icon-31:before { content: "6"; }
+.icon-32:before { content: "1"; }
+.icon-33:before { content: "6"; }
+.icon-34:before { content: "1"; }
+.icon-35:before { content: "W"; }
+.icon-36:before { content: "1"; }
+.icon-37:before { content: "S"; }
+.icon-38:before { content: "S"; }
+.icon-39:before { content: "S"; }
+.icon-40:before { content: "M"; }
+.icon-41:before { content: "W"; }
+.icon-42:before { content: "I"; }
+.icon-43:before { content: "W"; }
+.icon-44:before { content: "a"; }
+.icon-45:before { content: "S"; }
+.icon-46:before { content: "U"; }
+.icon-47:before { content: "S"; }
+
+#weather h2 {
+	margin: 0 0 8px;
+	color: #fff;
+	font-size: 20px;
+	font-weight: 300;
+	text-align: right;
+	text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+#weather a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#weather ul {
+	margin: 0;
+	padding: 0;
+}
+
+#weather li {
+	background: #fff;
+	background: rgba(255,255,255,0.90);
+	padding: 20px;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+#weather .currently {
+	margin: 0 20px;
+}
+
+.gform_wrapper {
+	display: block;
+
+}*/
+ 

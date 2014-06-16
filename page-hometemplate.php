@@ -26,6 +26,40 @@ get_header(); ?>
 		<div id="primary">
 			<div id="content" class="fullWidth" role="main">
 
+			<div class="row clearfix mapContainer">
+
+				<div class="span-50 mapList">
+					<ul>
+						<li><a href="#">Station 1</a></li>
+						<li><a href="#">Station 2</a></li>
+						<li><a href="#">Station 3</a></li>
+						<li><a href="#">Station 4</a></li>
+						<li><a href="#">Station 5</a></li>
+						<li><a href="#">Station 6</a></li>
+						<li><a href="#">Station 7</a></li>
+						<li><a href="#">Station 8</a></li>
+						<li><a href="#">Station 9</a></li>
+					</ul>
+				</div>
+
+				<div class="span-50 mapGraphic">
+					<ul>
+						<li><a href="#">Station 1</a></li>
+						<li><a href="#">Station 2</a></li>
+						<li><a href="#">Station 3</a></li>
+						<li><a href="#">Station 4</a></li>
+						<li><a href="#">Station 5</a></li>
+						<li><a href="#">Station 6</a></li>
+						<li><a href="#">Station 7</a></li>
+						<li><a href="#">Station 8</a></li>
+						<li><a href="#">Station 9</a></li>
+					</ul>
+
+					<div class="mapObject"></div>
+				</div>
+
+			</div>
+
 <?php while ( have_posts() ) : the_post(); ?>
         <?php
 
