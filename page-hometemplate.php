@@ -251,12 +251,19 @@ if( have_rows('highlight_columns') ):
 
 						<div class="span-50 dropin outlinebox">
 								<h3><?php the_sub_field('column_1_title'); ?></h3>
-					<?php the_sub_field('column_1'); ?>
+					<?php the_sub_field('column_1_text'); ?>
 						</div>
 
 						<div class="span-50 dropin3 outlinebox">
 							<h3><?php the_sub_field('column_2_title'); ?></h3>
-					<?php the_sub_field('column_2'); ?>
+									<?php if(get_sub_field('column_options') == "text") { ?>
+									<?php the_sub_field('column_2_text'); ?>
+									<?php } else { ?>
+									<?php			if (class_exists('EM_Events')) {
+    								echo EM_Events::output( array('limit'=>4,'orderby'=>'event_start_date','category'=>'5') );
+									} ?>
+
+									<?php } ?>
 						</div>
 
 
