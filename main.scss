@@ -292,12 +292,12 @@ nav#access ul li a:link, nav#access ul li a:visited {
 }
 
 nav#access ul.sub-menu li a:link, nav#access ul.sub-menu li a:visited {
-	background: rgba(0,0,0,0.3);
+	background: rgba(0,0,0,0.6);
 }
 
 nav#access ul.sub-menu li a:hover {
-	background: rgba(0,0,0,0.3);
-	border: 1px solid rgba(255,255,255,0.8);
+	background: rgba(0,0,0,0.4);
+	border: 1px solid rgba(255,255,255,0.5);
 }
 
 nav#access ul li a:hover {
@@ -469,7 +469,7 @@ div.headershade {
 }
 
 
-.home.page-template-default #content {
+.home.page-template-default #content, .home.page-template-page-nosidebar-php #content {
 	background: #fff !important;
 	padding: 30px !important;
 }
