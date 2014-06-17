@@ -471,6 +471,17 @@ div.headershade {
 
 .home.page-template-default #content {
 	background: #fff !important;
+	padding: 30px !important;
+}
+
+div#page {
+	background: url("img/farmglyphs_bg.png") no-repeat;
+	background-size: 100%;
+	background-position: bottom center;
+}
+
+.spacer {
+	height: 5em;
 }
 
 /**  Child them styles **/

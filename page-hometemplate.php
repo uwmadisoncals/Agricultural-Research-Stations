@@ -286,7 +286,7 @@ endif;
 
 				<!-- CALS News Content Box -->
 
-
+			<div class="spacer"></div>
 
 
 			</div><!-- #content -->

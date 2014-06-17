@@ -32,7 +32,7 @@
 			<div class="linksContainer right">
 				<h3>Contact Us</h3>
 				<p>The headquarters for the Agricultural Research Stations is located in Arlington, Wisconsin on the Arlington Agricultural Research Station.</p>
-				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d23228.783397495863!2d-89.35199800012208!3d43.30174121135559!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDE4JzEwLjIiTiA4OcKwMjAnNDMuMCJX!5e0!3m2!1sen!2sus!4v1402603950041" width="400" height="200" frameborder="0" style="border:0"></iframe>
+				
 				<p class="address">Agricultural Research Station Headquarters | N695 Hopkins Rd | Arlington WI 53911 | 608.846.3750 | <a href="mailto:ars@cals.wisc.edu">ars@cals.wisc.edu</a></p>
 			</div>
 			<div class="clearfix"></div>
