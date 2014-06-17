@@ -211,7 +211,7 @@ div.contrastmask2 {
 }
 
 .outlinebox {
-	border: 1px solid rgba(255,255,255,0.7);
+	border: 1px solid rgba(255,255,255,0.2);
 	padding: 2em;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -220,6 +220,7 @@ div.contrastmask2 {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	color: #fff;
+	min-height: 200px;
 }
 
 #access ul {
@@ -317,6 +318,14 @@ nav#access ul li {
 	margin-bottom: 0.4em;
 }
 
+nav#access ul li.menu-item-has-children > a  {
+	background: url("svg/downarrow.svg") no-repeat;
+	background-position: 90% center;
+	background-size: 1.3em;
+	padding-right: 2.3em;
+
+}
+
 nav#access .current_page_item>a:link, nav#access .current_page_item>a:visited {
 	background: transparent !important;
 	border: 1px solid rgba(255,255,255,0.8);
@@ -324,6 +333,18 @@ nav#access .current_page_item>a:link, nav#access .current_page_item>a:visited {
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 }
+
+nav#access li:hover > a,
+nav#access a:focus {
+
+	background: rgba(0,0,0,0.4);
+	color: #373737;
+	border: 1px solid rgba(255,255,255,0.4);
+	margin-left: 0px;
+	margin-right: 0px;
+
+}
+
 
 div.navWrapper .menu {
 	padding-right: 0px;
