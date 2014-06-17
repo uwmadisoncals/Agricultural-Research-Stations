@@ -250,12 +250,12 @@ if( have_rows('highlight_columns') ):
 					<div class="row clearfix">
 
 						<div class="span-50 dropin outlinebox">
-								<h3><?php the_sub_field('column_1_title'); ?></h3>
+								<h3><?php the_sub_field('column_1_title_1'); ?></h3>
 					<?php the_sub_field('column_1_text'); ?>
 						</div>
 
 						<div class="span-50 dropin3 outlinebox">
-							<h3><?php the_sub_field('column_2_title'); ?></h3>
+							<h3><?php the_sub_field('column_2_title_1'); ?></h3>
 									<?php if(get_sub_field('column_options') == "text") { ?>
 									<?php the_sub_field('column_2_text'); ?>
 									<?php } else { ?>
