@@ -148,6 +148,11 @@ div.contrastmask2 {
 		left: 270px;
 	}
 
+	.greenhouses {
+		top: 400px;
+		left: 270px;
+	}
+
 	.wmadison {
 		top: 400px;
 		left: 150px;
@@ -296,12 +301,20 @@ nav#access ul li a:link, nav#access ul li a:visited {
 }
 
 nav#access ul.sub-menu li a:link, nav#access ul.sub-menu li a:visited {
+	background: rgba(0,0,0,0.0);
+	border-bottom: 1px solid rgba(255,255,255,0.15);
+	display:block;
+
+}
+
+nav#access ul.sub-menu {
 	background: rgba(0,0,0,0.6);
+	width: 268px;
 }
 
 nav#access ul.sub-menu li a:hover {
-	background: rgba(0,0,0,0.4);
-	border: 1px solid rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.1);
+	border: none;
 }
 
 nav#access ul ul {
@@ -332,6 +345,11 @@ nav#access ul li.menu-item-has-children > a  {
 	background-size: 1.3em;
 	padding-right: 2.3em;
 
+}
+
+nav#access ul li ul.sub-menu li {
+	margin-right: 0px;
+	margin-bottom: 0px;
 }
 
 nav#access .current_page_item>a:link, nav#access .current_page_item>a:visited {
