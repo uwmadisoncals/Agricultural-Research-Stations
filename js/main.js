@@ -6,7 +6,7 @@ jQuery( document ).ready(function( $ ) {
     $(".mapGraphic a").each(function() {
       if($(this).text() == mi) {
         $(this).addClass("hovered");
-      } 
+      }
     });
   });
 
@@ -14,6 +14,18 @@ jQuery( document ).ready(function( $ ) {
     $(".mapGraphic a").each(function() {
         $(this).removeClass("hovered");
     });
+  });
+
+  $(".locationTrigger").click(function(e) {
+    e.preventDefault();
+    $(".locationList").slideToggle(300);
+
+  });
+
+  $(".locationList a").click(function(e) {
+    e.preventDefault();
+    $(".locationTrigger").text($(this).text());
+    $(".locationList").slideUp(300);
   });
 
 });

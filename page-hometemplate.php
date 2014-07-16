@@ -27,31 +27,109 @@ get_header(); ?>
 			<div id="content" class="fullWidth" role="main">
 
 
-			<h2 class="sectionHeading first"><svg enable-background="new 0 0 141.732 141.732" height="141.732px" id="Livello_1" version="1.1" viewBox="0 0 141.732 141.732" width="141.732px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Livello_110"><path class="mapPinInner" d="M95.35,50.645c0,13.98-11.389,25.322-25.438,25.322c-14.051,0-25.438-11.342-25.438-25.322   c0-13.984,11.389-25.322,25.438-25.322C83.964,25.322,95.35,36.66,95.35,50.645 M121.743,50.645C121.743,22.674,98.966,0,70.866,0   C42.768,0,19.989,22.674,19.989,50.645c0,12.298,4.408,23.574,11.733,32.345l39.188,56.283l39.761-57.104   c1.428-1.779,2.736-3.654,3.916-5.625l0.402-0.574h-0.066C119.253,68.516,121.743,59.874,121.743,50.645"/></g><g id="Livello_1_1_"/></svg> Locations</h2>
+
 
 			<div class="row clearfix mapContainer">
 
-				<div class="span-50 mapList">
+				<div class="span-50">
+					<h2 class="sectionHeading first"><svg enable-background="new 0 0 32 32" height="32px" id="svg2" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="background"><rect fill="none" class="mapPinInner" height="32" width="32"/></g><g id="news_1_"><path d="M4,14h20v-2H4V14z M15,26h7v-2h-7V26z M15,22h9v-2h-9V22z M15,18h9v-2h-9V18z M4,26h9V16H4V26z M28,10V6H0v22c0,0,0,4,4,4   h25c0,0,3-0.062,3-4V10H28z M4,30c-2,0-2-2-2-2V8h24v20c0,0.921,0.284,1.558,0.676,2H4z"/></g></svg> Announcements</h2>
 
-					<ul>
-						<li><a href="#">Arlington</a></li>
-						<li><a href="#">Dairy Forage</a></li>
-						<li><a href="#">Greenhouse</a></li>
-						<li><a href="#">Hancock</a></li>
-						<li><a href="#">Kemp</a></li>
-						<li><a href="#">Lancaster</a></li>
-						<li><a href="#">Marshfield</a></li>
-						<li><a href="#">O.J. Noer</a></li>
-						<li><a href="#">Peninsular</a></li>
-						<li><a href="#">Rhinelander</a></li>
-						<li><a href="#">Spooner</a></li>
-						<li><a href="#">Administration</a></li>
-						<li><a href="#">CALS Greenhouses</a></li>
-						<li><a href="#">West Madison</a></li>
-					</ul>
+					<?php while ( have_posts() ) : the_post(); ?>
+									<?php
+
+					// check if the flexible content field has rows of data
+					if( have_rows('highlight_columns') ):
+
+							// loop through the rows of data
+							while ( have_rows('highlight_columns') ) : the_row();
+
+									if( get_row_layout() == '3_column_row' ): ?>
+
+										<div class="row clearfix">
+
+											<div class="span-33 dropin outlinebox">
+													<h3><?php the_sub_field('column_1_title'); ?></h3>
+										<?php the_sub_field('column_1'); ?>
+											</div>
+
+											<div class="span-33 dropin3 outlinebox">
+												<h3><?php the_sub_field('column_2_title'); ?></h3>
+										<?php the_sub_field('column_2'); ?>
+											</div>
+
+											<div class="span-33 dropin2 outlinebox">
+													<h3><?php the_sub_field('column_3_title'); ?></h3>
+										<?php the_sub_field('column_3'); ?>
+											</div>
+
+										</div>
+
+									<?php endif;
+
+
+									if( get_row_layout() == '2_column_row' ): ?>
+
+										<div class="row clearfix">
+
+											<div class="span-100 dropin outlinebox">
+													<h3><?php the_sub_field('column_1_title_1'); ?></h3>
+										<?php the_sub_field('column_1_text'); ?>
+											</div>
+
+											<div class="span-100 dropin3 outlinebox">
+												<h3><?php the_sub_field('column_2_title_1'); ?></h3>
+														<?php if(get_sub_field('column_options') == "text") { ?>
+														<?php the_sub_field('column_2_text'); ?>
+														<?php } else { ?>
+														<?php			if (class_exists('EM_Events')) {
+															echo EM_Events::output( array('limit'=>4,'orderby'=>'event_start_date','category'=>'5') );
+														} ?>
+
+														<?php } ?>
+											</div>
+
+
+
+										</div>
+
+									<?php endif;
+
+							endwhile;
+
+					else :
+
+							// no layouts found
+
+					endif;
+
+					?>
+
+					<?php endwhile; // end of the loop. ?>
 				</div>
 
 				<div class="span-50 mapGraphic">
+					<h2 class="sectionHeading first"><svg enable-background="new 0 0 141.732 141.732" height="141.732px" id="Livello_1" version="1.1" viewBox="0 0 141.732 141.732" width="141.732px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Livello_110"><path class="mapPinInner" d="M95.35,50.645c0,13.98-11.389,25.322-25.438,25.322c-14.051,0-25.438-11.342-25.438-25.322   c0-13.984,11.389-25.322,25.438-25.322C83.964,25.322,95.35,36.66,95.35,50.645 M121.743,50.645C121.743,22.674,98.966,0,70.866,0   C42.768,0,19.989,22.674,19.989,50.645c0,12.298,4.408,23.574,11.733,32.345l39.188,56.283l39.761-57.104   c1.428-1.779,2.736-3.654,3.916-5.625l0.402-0.574h-0.066C119.253,68.516,121.743,59.874,121.743,50.645"/></g><g id="Livello_1_1_"/></svg> Locations</h2>
+					<div class="mapList">
+						<a href="#" class="locationTrigger">Select a Location</a>
+						<ul class="locationList">
+							<li><a href="#">Arlington</a></li>
+							<li><a href="#">Dairy Forage</a></li>
+							<li><a href="#">Greenhouse</a></li>
+							<li><a href="#">Hancock</a></li>
+							<li><a href="#">Kemp</a></li>
+							<li><a href="#">Lancaster</a></li>
+							<li><a href="#">Marshfield</a></li>
+							<li><a href="#">O.J. Noer</a></li>
+							<li><a href="#">Peninsular</a></li>
+							<li><a href="#">Rhinelander</a></li>
+							<li><a href="#">Spooner</a></li>
+							<li><a href="#">Administration</a></li>
+							<li><a href="#">CALS Greenhouses</a></li>
+							<li><a href="#">West Madison</a></li>
+						</ul>
+					</div>
+
+
 					<div class="points">
 						<a href="#" class="arlington"><span class="dot"><svg enable-background="new 0 0 141.732 141.732" height="141.732px" id="Livello_1" version="1.1" viewBox="0 0 141.732 141.732" width="141.732px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Livello_110"><path class="mapPinInner" d="M95.35,50.645c0,13.98-11.389,25.322-25.438,25.322c-14.051,0-25.438-11.342-25.438-25.322   c0-13.984,11.389-25.322,25.438-25.322C83.964,25.322,95.35,36.66,95.35,50.645 M121.743,50.645C121.743,22.674,98.966,0,70.866,0   C42.768,0,19.989,22.674,19.989,50.645c0,12.298,4.408,23.574,11.733,32.345l39.188,56.283l39.761-57.104   c1.428-1.779,2.736-3.654,3.916-5.625l0.402-0.574h-0.066C119.253,68.516,121.743,59.874,121.743,50.645"/></g><g id="Livello_1_1_"/></svg></span>Arlington</a>
 						<a href="#" class="dairyforage"><span class="dot"><svg enable-background="new 0 0 141.732 141.732" height="141.732px" id="Livello_1" version="1.1" viewBox="0 0 141.732 141.732" width="141.732px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Livello_110"><path class="mapPinInner" d="M95.35,50.645c0,13.98-11.389,25.322-25.438,25.322c-14.051,0-25.438-11.342-25.438-25.322   c0-13.984,11.389-25.322,25.438-25.322C83.964,25.322,95.35,36.66,95.35,50.645 M121.743,50.645C121.743,22.674,98.966,0,70.866,0   C42.768,0,19.989,22.674,19.989,50.645c0,12.298,4.408,23.574,11.733,32.345l39.188,56.283l39.761-57.104   c1.428-1.779,2.736-3.654,3.916-5.625l0.402-0.574h-0.066C119.253,68.516,121.743,59.874,121.743,50.645"/></g><g id="Livello_1_1_"/></svg></span>Dairy Forage</a>
@@ -212,79 +290,7 @@ get_header(); ?>
 				</div>
 
 			</div>
-<h2 class="sectionHeading"><svg enable-background="new 0 0 32 32" height="32px" id="svg2" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="background"><rect fill="none" class="mapPinInner" height="32" width="32"/></g><g id="news_1_"><path d="M4,14h20v-2H4V14z M15,26h7v-2h-7V26z M15,22h9v-2h-9V22z M15,18h9v-2h-9V18z M4,26h9V16H4V26z M28,10V6H0v22c0,0,0,4,4,4   h25c0,0,3-0.062,3-4V10H28z M4,30c-2,0-2-2-2-2V8h24v20c0,0.921,0.284,1.558,0.676,2H4z"/></g></svg> Announcements</h2>
 
-<?php while ( have_posts() ) : the_post(); ?>
-        <?php
-
-// check if the flexible content field has rows of data
-if( have_rows('highlight_columns') ):
-
-     // loop through the rows of data
-    while ( have_rows('highlight_columns') ) : the_row();
-
-        if( get_row_layout() == '3_column_row' ): ?>
-
-          <div class="row clearfix">
-
-            <div class="span-33 dropin outlinebox">
-                <h3><?php the_sub_field('column_1_title'); ?></h3>
-        	<?php the_sub_field('column_1'); ?>
-            </div>
-
-            <div class="span-33 dropin3 outlinebox">
-              <h3><?php the_sub_field('column_2_title'); ?></h3>
-          <?php the_sub_field('column_2'); ?>
-            </div>
-
-            <div class="span-33 dropin2 outlinebox">
-                <h3><?php the_sub_field('column_3_title'); ?></h3>
-          <?php the_sub_field('column_3'); ?>
-            </div>
-
-          </div>
-
-        <?php endif;
-
-
-				if( get_row_layout() == '2_column_row' ): ?>
-
-					<div class="row clearfix">
-
-						<div class="span-50 dropin outlinebox">
-								<h3><?php the_sub_field('column_1_title_1'); ?></h3>
-					<?php the_sub_field('column_1_text'); ?>
-						</div>
-
-						<div class="span-50 dropin3 outlinebox">
-							<h3><?php the_sub_field('column_2_title_1'); ?></h3>
-									<?php if(get_sub_field('column_options') == "text") { ?>
-									<?php the_sub_field('column_2_text'); ?>
-									<?php } else { ?>
-									<?php			if (class_exists('EM_Events')) {
-    								echo EM_Events::output( array('limit'=>4,'orderby'=>'event_start_date','category'=>'5') );
-									} ?>
-
-									<?php } ?>
-						</div>
-
-
-
-					</div>
-
-				<?php endif;
-
-    endwhile;
-
-else :
-
-    // no layouts found
-
-endif;
-
-?>
-
-<?php endwhile; // end of the loop. ?>
 
 				<!-- CALS News Content Box -->
 

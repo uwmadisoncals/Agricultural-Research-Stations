@@ -45,14 +45,38 @@ div.contrastmask2 {
 }
 
 .mapList {
+	position: relative;
 
+	.locationList {
+		display: none;
+		position: absolute;
+		top: 49px;
+		left: 0px;
+		right: 0px;
+		z-index:20;
+		background: rgba(0,0,0,0.8);
+		max-height: 400px;
+		overflow: auto;
+	}
+
+	a.locationTrigger {
+		display: block;
+		text-decoration: none;
+		padding: 1em;
+		font-size: 1.1em;
+		border: 1px solid rgba(255,255,255,0.2);
+		font-weight: bold;
+
+			color: rgba(255,255,255,0.8);
+		
+	}
 
 }
 
 .mapList ul {
 	border: 1px solid rgba(255,255,255,0.2);
 	border-radius: 2px;
-	width: 80%;
+
 }
 
 .mapList li {
@@ -501,9 +525,9 @@ div.headershade {
 }
 
 div#page {
-	background: url("img/farmglyphs_bg.png") no-repeat;
+	/*background: url("img/farmglyphs_bg.png") no-repeat;
 	background-size: 100%;
-	background-position: bottom center;
+	background-position: bottom center;*/
 }
 
 .spacer {
