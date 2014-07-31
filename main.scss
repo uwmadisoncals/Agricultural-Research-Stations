@@ -68,7 +68,7 @@ div.contrastmask2 {
 		font-weight: bold;
 
 			color: rgba(255,255,255,0.8);
-		
+
 	}
 
 }
@@ -222,6 +222,24 @@ div.contrastmask2 {
 		left: 280px;
 	}
 
+
+}
+
+.row {
+
+	.span-50 {
+		float: left;
+		width: 50%;
+		box-sizing: border-box;
+		padding: 1em;
+		margin-bottom: 1em;
+	}
+
+	.span-100 {
+		box-sizing: border-box;
+		padding: 1em;
+		margin-bottom: 1em;
+	}
 
 }
 
