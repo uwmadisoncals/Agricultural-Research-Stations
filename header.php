@@ -131,6 +131,15 @@ $current_colorscheme = $options['link_color'];
 
 <body <?php body_class(); ?> id="<?php echo $current_colorscheme; ?>">
 
+<div class="sideBarNav">
+			<a href="#" class="sideBarClose"><?php include("img/closebutton.svg"); ?> Close Menu</a>
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+			</nav>
+		</div>
+		<div class="siteWrapperOverlay"></div>
+
+<div class="siteWrapper">
 <div id="mobile-menu">
 	<div id="mobile-menu-inner">
 	<!--<div class="mobile-search"><input type="search" placeholder="Search" /></div>-->
@@ -145,6 +154,8 @@ $current_colorscheme = $options['link_color'];
 			<li><a href="<?php echo home_url(); ?>">Home</a></li>
 
 		</ul>
+
+
 		<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 	</div>
 
@@ -240,12 +251,14 @@ $url = $thumb['0']; ?>
 
 
 
-
 			</hgroup>
 
 
 
 			<nav id="access" role="navigation">
+				<a href="#" class="menuTrigger"><?php include("img/menuicon.svg"); ?> Menu</a>
+
+
 				<div class="headeroverlay">
 
 
@@ -257,10 +270,7 @@ $url = $thumb['0']; ?>
 				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
 				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
 				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
-				<div class="navWrapper clearfix">
-				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 
-				</div>
 				<!-- The markup of the navigation if it is hard coded -->
 				<!--<ul class="clearfix">
 			  		<li><a href="#">Students</a></li>

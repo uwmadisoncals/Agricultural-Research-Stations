@@ -50,7 +50,7 @@ div.contrastmask2 {
 	.locationList {
 		display: none;
 		position: absolute;
-		top: 49px;
+		top: 0px;
 		left: 0px;
 		right: 0px;
 		z-index:20;
@@ -59,19 +59,11 @@ div.contrastmask2 {
 		overflow: auto;
 	}
 
-	a.locationTrigger {
-		display: block;
-		text-decoration: none;
-		padding: 1em;
-		font-size: 1.1em;
-		border: 1px solid rgba(255,255,255,0.2);
-		font-weight: bold;
 
-			color: rgba(255,255,255,0.8);
-
-	}
 
 }
+
+
 
 .mapList ul {
 	border: 1px solid rgba(255,255,255,0.2);
@@ -113,6 +105,70 @@ div.contrastmask2 {
 
 }
 
+
+.mapGraphic {
+
+
+a.locationTrigger {
+	display: inline-block;
+	text-decoration: none;
+	position: absolute;
+	top: 0px;
+	margin-top:8px;
+	margin-left: 8px;
+	line-height: 0.1em;
+	padding: 1em;
+	width: 20px;
+	height: 20px;
+	transition: 0.3s;
+	border-radius: 3px;
+	color: rgba(255,255,255,0.8);
+	border: 1px solid rgba(255,255,255,0);
+
+	svg {
+		height: 1.2em;
+		width: 1.2em;
+		margin-top: -8px;
+		margin-left: -9px;
+
+		polygon {
+			fill: #4da7ea;
+		}
+	}
+
+}
+
+a.locationTrigger:hover {
+	display: inline-block;
+		text-decoration: none;
+		position: absolute;
+		top: 0px;
+		margin-top:8px;
+		margin-left: 8px;
+		line-height: 0.1em;
+		padding: 1em;
+		width: 20px;
+		height: 20px;
+		border: 1px solid #4da7ea;
+
+		color: rgba(255,255,255,0.8);
+
+		svg {
+			height: 1.2em;
+			width: 1.2em;
+			margin-top: -8px;
+			margin-left: -9px;
+
+		polygon {
+			fill: #4da7ea;
+		}
+	}
+
+}
+
+
+}
+
 .mapGraphic .dot svg {
 	max-height: 25px;
 	max-width: 40px;
@@ -132,7 +188,7 @@ div.contrastmask2 {
 
 }
 
-.mapGraphic a.hovered svg, .mapGraphic a:hover svg {
+.mapGraphic .points a.hovered svg, .mapGraphic .points a:hover svg {
 	transform: scale(1.4);
 }
 
@@ -150,76 +206,80 @@ div.contrastmask2 {
 
 
 	a {
-		font-weight: bold;
+		font-weight: 500;
+		font-size: 0.9em;
 		text-transform: uppercase;
 		position: absolute;
+		text-indent: -6px;
 	}
+
 
 
 
 	.arlington {
-		top: 380px;
-		left: 280px;
+		top: 76%;
+		left: 57%;
 	}
 
 	.dairyforage {
-		top: 370px;
-		left: 215px;
+		top: 74%;
+		left: 43%;
 	}
 
 	.madison {
-		top: 400px;
-		left: 270px;
+		top: 82.5%;
+		left: 54%;
+		display: none;
 	}
 
 	.greenhouses {
-		top: 400px;
-		left: 270px;
+		top: 82.5%;
+		left: 54%;
 	}
 
 	.wmadison {
-		top: 400px;
-		left: 150px;
+		top: 82%;
+		right: 46%;
 	}
 
 	.noer {
-		top: 415px;
-		left: 260px;
+		top: 86%;
+		left: 51%;
 	}
 
 	.lancaster {
-		top: 425px;
-		left: 160px;
+		top: 87%;
+		left: 34%;
 	}
 
 	.hancock {
-		top: 300px;
-		left: 270px;
+		top: 65%;
+		left: 55%;
 	}
 
 	.marshfield {
-		top: 260px;
-		left: 180px;
+		top: 57%;
+		left: 35%;
 	}
 
 	.peninsular {
-		top: 220px;
-		left: 420px
+		top: 45%;
+		right: 6.5%;
 	}
 
 	.spooner {
-		top: 150px;
-		left: 100px;
+		top: 36%;
+		left: 20%;
 	}
 
 	.kemp {
-		top: 140px;
-		left: 260px;
+		top: 33%;
+		left: 55%;
 	}
 
 	.rhinelander {
-		top: 170px;
-		left: 280px;
+		top: 39%;
+		left: 60%;
 	}
 
 
@@ -240,6 +300,85 @@ margin-bottom: 1em;
 	}
 
 }
+
+/*********************/
+/* Clear Fix         */
+/*********************/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+
+.row:before,
+.row:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.row:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.row {
+    *zoom: 1;
+}
+
+
+.row {
+
+  .span-25 {
+    float: left;
+    width: 25%;
+  }
+
+  .span-50 {
+    float: left;
+    width: 50%;
+  }
+
+  .span-75 {
+    float: left;
+    width: 75%;
+  }
+
+  .span-33 {
+    float: left;
+    width: 33%;
+  }
+
+  .span-66 {
+    float: left;
+    width: 66%;
+  }
+
+
+}
+
 
 
 
@@ -494,7 +633,7 @@ footer div.inner {
 
 #branding #access #s {
 	border-left: none;
-	width: 70px;
+	width: 130px;
 	padding-top: 10px;
 	padding-bottom: 8px;
 }
@@ -507,6 +646,7 @@ border-radius: 3px;
 	-webkit-transition: 0.4s;
 	-moz-transition: 0.4s;
 	transition: 0.4s;
+	height: 38px;
 }
 
 #branding #access #s:focus {
@@ -549,6 +689,253 @@ div#page {
 .spacer {
 	height: 5em;
 }
+
+.collegeFeature li .featureCaption .centered, .iosSlider .featureCaption .centered {
+	max-width: 940px;
+	width: 100% !important;
+	margin: 0 auto;
+}
+
+
+
+.sideBarNav {
+  display: block;
+
+  position: fixed;
+  top: 0px;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  z-index:50;
+  background: #000;
+  color: #fff;
+  padding: 2em;
+  transform: translate3d(0px,0px,0px);
+    transition: all 0.4s ease;
+
+
+  a.sideBarClose {
+    color: rgba(255,255,255,0.4);
+    outline: none;
+    display: block;
+
+    height: 50px;
+    text-decoration: none;
+    font-family: "Raleway",sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: 0.3s;
+
+    svg {
+      width: 1.8em;
+      height: 1.8em;
+      float: left;
+      margin-top: -8px;
+      margin-right: 0.4em;
+
+      path, rect, circle, polygon {
+        fill: rgba(255,255,255,0.4);
+        transition: 0.3s;
+
+      }
+    }
+
+  }
+
+  a.sideBarClose:hover {
+    color: rgba(255,255,255,0.8);
+    outline: none;
+    display: block;
+
+    height: 50px;
+    text-decoration: none;
+    font-family: "Raleway",sans-serif;
+
+
+    svg {
+      width: 1.8em;
+      height: 1.8em;
+      float: left;
+      margin-top: -8px;
+      margin-right: 0.4em;
+      path, rect, circle, polygon {
+        fill: rgba(255,255,255,0.8);
+
+      }
+    }
+
+  }
+
+  nav {
+		ul.menu {
+			overflow-y: scroll;
+
+	    li {
+	      float: none;
+
+				ul.sub-menu {
+					display: none;
+				}
+
+	      a {
+					display: block;
+					float: none;
+	        color: #fff;
+	        font-weight: 300;
+	        font-size: 1.5em;
+	        padding-top: 0.8em;
+	        padding-bottom: 0.8em;
+	        border-bottom: 1px solid rgba(255,255,255,0.1);
+	        -webkit-font-smoothing: antialiased;
+
+
+	      }
+	    }
+		}
+  }
+
+}
+
+.sideBarNav.navVisible {
+  display: block;
+
+transform: translate3d(-300px,0px,0px);
+
+}
+
+
+
+.siteWrapper {
+  transition: 0.4s;
+
+
+
+
+}
+
+.siteWrapperOverlay {
+  background: rgba(0,0,0,0);
+  position:fixed;
+  top: 0px;
+  left: 0px;
+  height: 0%;
+  width: 0%;
+  z-index:40;
+  transition: background 0.4s;
+}
+
+.siteWrapperOverlay.navVisible {
+  background: rgba(0,0,0,0.3);
+
+  height: 100%;
+  width: 100%;
+
+transition: background 0.4s;
+}
+
+.siteWrapper.navVisible {
+  transform: translate3d(-40px,0px,0px);
+  filter: blur(4px);
+
+
+
+}
+
+.menuTrigger, .menuTrigger:visited {
+  float: right;
+  padding: 0.6em;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  font-family: "Raleway";
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  border: 1px solid rgba(255,255,255,0);
+  border-radius: 3px;
+  transition: 0.3s;
+
+  svg {
+    margin-right: 4px;
+    height: 100%;
+
+    path, rect, circle {
+      fill: rgba(255,255,255,0.8);
+    }
+  }
+}
+
+.menuTrigger:hover {
+  float: right;
+  padding: 0.6em;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.8);
+
+  font-size: 1.2em;
+  text-decoration: none;
+  font-family: "Raleway";
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+
+  svg {
+    margin-right: 4px;
+    height: 100%;
+
+    path, rect, circle {
+      fill: rgba(255,255,255,0.8);
+    }
+  }
+}
+
+#site-navigation {
+  .menu {
+    ul.children {
+      display: none;
+      position: relative;
+      float: none;
+      top: 0px;
+      left: 0px;
+      padding-left: 8%;
+      box-shadow: none;
+      background: rgba(0,0,0,0.1);
+    }
+
+    .expandLink {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 60px;
+      height: 60px;
+      z-index:5;
+      font-size: 0px;
+      color: transparent;
+      border-bottom: none;
+      background: url("../../../dist/images/downarrow.svg") no-repeat;
+      background-size: 50% 50%;
+      background-position: center center;
+      transition: transform 0.4s;
+    }
+
+    .expandLink:hover {
+
+      background: url("../../../dist/images/downarrow_over.svg") no-repeat;
+      background-size: 50% 50%;
+      background-position: center center;
+    }
+
+    .expandLink.expanded {
+      transform: rotate(180deg);
+    }
+  }
+}
+
 
 /**  Child them styles **/
 
@@ -764,3 +1151,29 @@ footer#colophon .socialRef {
 	display: block;
 
 }*/
+
+@media only screen and (min-width : 100px) {
+	.row {
+		.span-50 {
+			width: 100%;
+			float: none;
+		}
+	}
+}
+
+@media only screen and (min-width : 600px) {
+
+}
+
+@media only screen and (min-width : 800px) {
+	.row {
+		.span-50 {
+			width: 50%;
+			float: left;
+		}
+	}
+}
+
+@media only screen and (min-width : 1200px) {
+
+}
