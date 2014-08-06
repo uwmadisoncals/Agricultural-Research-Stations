@@ -28,8 +28,8 @@ jQuery( document ).ready(function( $ ) {
   });
 
   $(".locationList a").click(function(e) {
-    e.preventDefault();
-    $(".locationTrigger").text($(this).text());
+   /* e.preventDefault();
+    $(".locationTrigger").text($(this).text());*/
     $(".locationList").slideUp(300);
   });
 

@@ -174,8 +174,10 @@ div.contrastmask2 {
 		z-index:20;
 		background: rgba(0,0,0,0.7);
 		overflow: auto !important;
-		max-height: 400px;
+		-webkit-overflow-scrolling: touch;
+		max-height: 450px;
 		transform: translateZ(0);
+
 		
 	}
 
