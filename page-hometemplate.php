@@ -71,12 +71,34 @@ get_header(); ?>
 
 										<div class="row clearfix">
 
-											<div class="span-100 dropin outlinebox">
+											<div class="span-100 dropin outlinebox" style="
+											<?php $attachment_id = get_sub_field('column_1_image_1'); 
+			$size = 'small';
+			$image = wp_get_attachment_image_src($attachment_id, $size);
+			
+			if ( $image ) { ?>
+						
+		    				<?php echo "background: url('".$image[0]."') no-repeat; background-position: center center; background-size: cover;"; ?>
+		    				 
+		    			<?php } ?> "><div class="imageOverlay"></div>
+		    			
+		    			<div class="boxContent">
 													<h3><?php the_sub_field('column_1_title_1'); ?></h3>
-										<?php the_sub_field('column_1_text'); ?>
+													<?php the_sub_field('column_1_text'); ?>
+		    			</div>
 											</div>
 
-											<div class="span-100 dropin3 outlinebox">
+							<div class="span-100 dropin outlinebox" style="
+											<?php $attachment_id = get_sub_field('column_2_image_1'); 
+			$size = 'small';
+			$image = wp_get_attachment_image_src($attachment_id, $size);
+			
+			if ( $image ) { ?>
+						
+		    				<?php echo "background: url('".$image[0]."') no-repeat; background-position: center center; background-size: cover;"; ?>
+		    				 
+		    			<?php } ?> "><div class="imageOverlay"></div>
+												<div class="boxContent">
 												<h3><?php the_sub_field('column_2_title_1'); ?></h3>
 														<?php if(get_sub_field('column_options') == "text") { ?>
 														<?php the_sub_field('column_2_text'); ?>
@@ -86,6 +108,7 @@ get_header(); ?>
 														} ?>
 
 														<?php } ?>
+														</div>
 											</div>
 
 
@@ -108,7 +131,7 @@ get_header(); ?>
 				</div>
 
 				<div class="span-50 mapGraphic">
-					<h2 class="sectionHeading first"><svg enable-background="new 0 0 141.732 141.732" height="141.732px" id="Livello_1" version="1.1" viewBox="0 0 141.732 141.732" width="141.732px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Livello_110"><path class="mapPinInner" d="M95.35,50.645c0,13.98-11.389,25.322-25.438,25.322c-14.051,0-25.438-11.342-25.438-25.322   c0-13.984,11.389-25.322,25.438-25.322C83.964,25.322,95.35,36.66,95.35,50.645 M121.743,50.645C121.743,22.674,98.966,0,70.866,0   C42.768,0,19.989,22.674,19.989,50.645c0,12.298,4.408,23.574,11.733,32.345l39.188,56.283l39.761-57.104   c1.428-1.779,2.736-3.654,3.916-5.625l0.402-0.574h-0.066C119.253,68.516,121.743,59.874,121.743,50.645"/></g><g id="Livello_1_1_"/></svg> Locations <a href="#" class="locationTrigger"><svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><polygon points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 "/></svg></a></h2>
+					<h2 class="sectionHeading first"><svg enable-background="new 0 0 141.732 141.732" height="141.732px" id="Livello_1" version="1.1" viewBox="0 0 141.732 141.732" width="141.732px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g id="Livello_110"><path class="mapPinInner" d="M95.35,50.645c0,13.98-11.389,25.322-25.438,25.322c-14.051,0-25.438-11.342-25.438-25.322   c0-13.984,11.389-25.322,25.438-25.322C83.964,25.322,95.35,36.66,95.35,50.645 M121.743,50.645C121.743,22.674,98.966,0,70.866,0   C42.768,0,19.989,22.674,19.989,50.645c0,12.298,4.408,23.574,11.733,32.345l39.188,56.283l39.761-57.104   c1.428-1.779,2.736-3.654,3.916-5.625l0.402-0.574h-0.066C119.253,68.516,121.743,59.874,121.743,50.645"/></g><g id="Livello_1_1_"/></svg> Locations <div class="locationButton"><a href="#" class="locationTrigger"><svg enable-background="new 0 0 50 50" height="50px" id="Layer_1" version="1.1" viewBox="0 0 50 50" width="50px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><rect fill="none" height="50" width="50"/><polygon points="47.25,15 45.164,12.914 25,33.078 4.836,12.914 2.75,15 25,37.25 "/></svg></a></div></h2>
 					<div class="mapList">
 
 						<ul class="locationList">

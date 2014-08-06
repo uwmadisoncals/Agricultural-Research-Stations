@@ -136,6 +136,12 @@ $current_colorscheme = $options['link_color'];
 			<nav id="site-navigation" class="main-navigation" role="navigation">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav>
+
+			<div class="sidebarLocation">
+				Agricultural Research Station Headquarters | N695 Hopkins Rd | Arlington WI 53911 | 608.846.3750 | <a href="mailto:ars@cals.wisc.edu">ars@cals.wisc.edu</a>
+
+
+			</div>
 		</div>
 		<div class="siteWrapperOverlay"></div>
 
@@ -411,6 +417,8 @@ $url = $thumb['0']; echo $url;
 	  				<div class="featuresubtitle">
 	  				<?php the_content_rss(); ?>
 	  				</div>
+	  				
+	  				<a href="<?php the_field('action_link'); ?>" class="button blue"><?php the_field('action_link_title'); ?></a>
   				</div>
   			</div>
 

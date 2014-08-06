@@ -18,7 +18,12 @@ jQuery( document ).ready(function( $ ) {
 
   $(".locationTrigger").click(function(e) {
     e.preventDefault();
-    $(".locationList").slideToggle(300);
+    $(".locationList").slideToggle(300, function() {
+	    //$(".locationList").css("overflow","auto");
+      //fixchromeGlitch();
+    });
+
+    /*$(".locationList").toggle();*/
 
   });
 
@@ -26,6 +31,21 @@ jQuery( document ).ready(function( $ ) {
     e.preventDefault();
     $(".locationTrigger").text($(this).text());
     $(".locationList").slideUp(300);
+  });
+
+  var cg;
+
+  function fixchromeGlitch() {
+    if($("body").hasClass("Chrome")) {
+      clearTimeout(cg);
+      cg = setTimeout(function() {
+        $("body").toggleClass("relative");
+      },50);
+    }
+  }
+
+  $(window).scroll(function() {
+    //fixchromeGlitch();
   });
 
 });
