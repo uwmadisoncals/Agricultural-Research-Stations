@@ -16,6 +16,8 @@ jQuery( document ).ready(function( $ ) {
     });
   });
 
+  var stationListOpen = false;
+
   $(".locationTrigger").click(function(e) {
     e.preventDefault();
     $(".locationList").slideToggle(300, function() {
@@ -27,10 +29,50 @@ jQuery( document ).ready(function( $ ) {
 
   });
 
+   $(".locationTrigger2").click(function(e) {
+    e.preventDefault();
+    $(".locationList2").slideToggle(300, function() {
+      
+      //$(".locationList").css("overflow","auto");
+      //fixchromeGlitch();
+    });
+
+    if(stationListOpen == false) {
+        stationListOpen = true;
+        return false;
+      } else {
+        stationListOpen = false;
+        return false;
+      }
+
+    /*$(".locationList").toggle();*/
+
+  });
+
   $(".locationList a").click(function(e) {
    /* e.preventDefault();
     $(".locationTrigger").text($(this).text());*/
-    $(".locationList").slideUp(300);
+    $(this).closest(".locationList").slideUp(300);
+  });
+
+  $(".locationList2 a").click(function(e) {
+   /* e.preventDefault();
+    $(".locationTrigger").text($(this).text());*/
+    $(this).closest(".locationList").slideUp(300);
+  });
+
+  
+
+  $("#branding").mouseover(function(e) {
+    $(".locationTrigger2").addClass("visible");
+  });
+
+  $("#branding").mouseout(function(e) {
+    if(stationListOpen == false) {
+      $(".locationTrigger2").removeClass("visible");
+    } else {
+
+    }
   });
 
   var cg;

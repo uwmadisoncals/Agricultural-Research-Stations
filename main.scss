@@ -547,6 +547,10 @@ margin-bottom: 1em;
 	padding: 1em;
 }
 
+#page #branding {
+	padding-bottom: 60px;
+}
+
 
 .imageOverlay {
 	position: absolute;
@@ -600,7 +604,7 @@ margin-bottom: 1em;
 #page #branding #access {
 	float: none;
 	position: absolute;
-	top: 40px;
+	top: 20px;
 	right: 0px;
 	box-shadow: none !important;
 	width: 50%;
@@ -611,6 +615,8 @@ margin-bottom: 1em;
 	display: block;
 	width: 45%;
 }
+
+
 
 .logoImage img {
 	width: 100%;
@@ -880,6 +886,107 @@ div#page {
 	margin: 0 auto;
 }
 
+.locationListHeader {
+  	position: relative;
+	
+	z-index: 20;
+
+
+	a.locationTrigger2.visible {
+		
+		opacity: 1;
+		top: 0px;
+	}
+
+	a.locationTrigger2 {
+	
+	opacity: 0;
+	text-decoration: none;
+	position: absolute;
+	top: -20px;
+	left: 57px; 
+	margin-top:0px;
+	margin-left: 8px;
+	line-height: 1.2em;
+	padding: 1em;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	transition: 0.3s;
+	border-radius: 3px;
+	color: rgba(255,255,255,0.8);
+	border: 1px solid rgba(255,255,255,0.6);
+
+	.stationSelect {
+		float: left;
+	}
+
+
+	svg {
+		float: left;
+		height: 1.2em;
+		width: 1.2em;
+		
+		margin-left: 8px;
+
+		polygon {
+			fill: rgba(255,255,255,0.8);
+		}
+	}
+
+}
+
+
+
+	a.locationTrigger2:hover {
+	display: block;
+		
+		border: 1px solid rgba(255,255,255,0);
+
+		color: rgba(0,0,0,0.7);
+		background: rgba(255,255,255,0.6);
+
+		svg {
+			
+
+			polygon {
+				fill: rgba(0,0,0,0.7);
+			}
+		}
+
+	}
+
+	.mapList {
+		.locationList2 {
+			
+			top: 34px;
+			max-width: 300px;
+			left: 65px;
+			z-index:30;
+
+			display: none;
+			position: absolute;
+			
+			right: 0px;
+			z-index:20;
+			background: rgba(255,255,255,0.94);
+			overflow: auto !important;
+			-webkit-overflow-scrolling: touch;
+			max-height: 430px;
+			transform: translateZ(0);
+			box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
+
+			a {
+				color: rgba(0,0,0,0.9);
+				border-bottom: 1px solid rgba(0,0,0,0.1);
+			}
+		}
+	}
+
+}
+
+
+
+
 
 
 .sideBarNav {
@@ -960,6 +1067,8 @@ div#page {
     }
 
   }
+
+  
 
   nav {
 		.menu {

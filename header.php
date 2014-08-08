@@ -256,7 +256,7 @@ $url = $thumb['0']; ?>
 			<?php endif; // end check for removed header image ?>
 
 
-
+			<?php get_template_part( "location", "list" ); ?> 
 			</hgroup>
 
 
@@ -292,7 +292,7 @@ $url = $thumb['0']; ?>
 				// Has the text been hidden?
 				if ( 'blank' == get_header_textcolor() ) :
 			?>
-				<div class="globalSearch">
+				<div class="globalSearch" style="display: none;">
 				<?php get_search_form(); ?>
 				<?php //cals_uw_directory_search($small=true, $add_class = 'search_results'); ?>
 				<div class="filtered" style="display: none;">
