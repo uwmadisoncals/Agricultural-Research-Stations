@@ -47,18 +47,18 @@ get_header(); ?>
 
 										<div class="row clearfix">
 
-											<div class="span-33 dropin outlinebox">
-													<h2 class="sectionHeading"><?php the_sub_field('column_1_title'); ?></h2>
+											<div class="span-33 dropin">
+													<h2 class="sectionHeading"><?php the_sub_field('3_column_1_text'); ?></h2>
 										<div class="columnContent"><?php the_sub_field('column_1'); ?></div>
 											</div>
 
-											<div class="span-33 dropin3 outlinebox">
-												<h2 class="sectionHeading"><?php the_sub_field('column_2_title'); ?></h2>
+											<div class="span-33 dropin3">
+												<h2 class="sectionHeading"><?php the_sub_field('3_column_2_text'); ?></h2>
 										<div class="columnContent"><?php the_sub_field('column_2'); ?></div>
 											</div>
 
-											<div class="span-33 dropin2 outlinebox">
-													<h2 class="sectionHeading"><?php the_sub_field('column_3_title'); ?></h2>
+											<div class="span-33 dropin2">
+													<h2 class="sectionHeading"><?php the_sub_field('3_column_3_text'); ?></h2>
 										<div class="columnContent"><?php the_sub_field('column_3'); ?></div>
 											</div>
 
