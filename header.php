@@ -137,7 +137,7 @@ $current_colorscheme = $options['link_color'];
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav>
 
-			<div class="sidebarLocation">
+			<div class="sidebarLocation" style="display: none;">
 				Agricultural Research Station Headquarters | N695 Hopkins Rd | Arlington WI 53911 | 608.846.3750 | <a href="mailto:ars@cals.wisc.edu">ars@cals.wisc.edu</a>
 
 
