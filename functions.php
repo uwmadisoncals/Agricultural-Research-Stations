@@ -6,6 +6,19 @@ if(function_exists("register_field_group"))
 		'title' => 'Header Slide Fields',
 		'fields' => array (
 			array (
+				'key' => 'field_53e17dc642c8b',
+				'label' => 'Action Link',
+				'name' => 'action_link',
+				'type' => 'page_link',
+				'post_type' => array (
+					0 => 'post',
+					1 => 'page',
+					2 => 'event',
+				),
+				'allow_null' => 0,
+				'multiple' => 0,
+			),
+			array (
 				'key' => 'field_53e17dfe42c8c',
 				'label' => 'Action Link Title',
 				'name' => 'action_link_title',
@@ -303,4 +316,3 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
-
