@@ -151,6 +151,15 @@ div.contrastmask2 {
 }
 
 
+.columnContent {
+	color: rgba(255,255,255,0.8) !important;
+	font-size: 1.2em;
+
+	a {
+		color: #5598d1 !important;
+	}
+}
+
 .single #content, .page #content, .search-results #content, .archive #content, .error404 #content, .search-no-results #content {
 	box-shadow: none !important;
 	border-radius: 2px !important;

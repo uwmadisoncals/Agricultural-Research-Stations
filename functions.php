@@ -137,7 +137,7 @@ if(function_exists("register_field_group"))
 								'type' => 'wysiwyg',
 								'column_width' => 33,
 								'default_value' => '',
-								'toolbar' => 'basic',
+								'toolbar' => 'full',
 								'media_upload' => 'yes',
 							),
 							array (
@@ -198,7 +198,7 @@ if(function_exists("register_field_group"))
 								),
 								'column_width' => 33,
 								'default_value' => '',
-								'toolbar' => 'basic',
+								'toolbar' => 'full',
 								'media_upload' => 'yes',
 							),
 							array (
@@ -243,6 +243,15 @@ if(function_exists("register_field_group"))
 					'group_no' => 0,
 				),
 			),
+			array (
+				array (
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'page-hometemplate2.php',
+					'order_no' => 0,
+					'group_no' => 1,
+				),
+			),
 		),
 		'options' => array (
 			'position' => 'normal',
@@ -265,3 +274,4 @@ if(function_exists("register_field_group"))
 		'menu_order' => 0,
 	));
 }
+

@@ -100,7 +100,7 @@ get_header(); ?>
 		    			<?php } ?> "><div class="imageOverlay"></div>
 												<div class="boxContent">
 												<h3><?php the_sub_field('column_2_title_1'); ?></h3>
-														<?php if(get_sub_field('column_options') == "text") { ?>
+														<?php if(get_sub_field('content_options') == "text") { ?>
 														<?php the_sub_field('column_2_text'); ?>
 														<?php } else { ?>
 														<?php			if (class_exists('EM_Events')) {
