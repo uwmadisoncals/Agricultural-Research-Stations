@@ -1,4 +1,8 @@
 <?php
+
+register_nav_menu( 'anchored', __( 'Anchored Menu', 'twentyeleven' ) );
+
+
 if(function_exists("register_field_group"))
 {
 	register_field_group(array (

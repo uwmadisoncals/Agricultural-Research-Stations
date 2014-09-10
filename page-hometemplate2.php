@@ -86,9 +86,11 @@ get_header(); ?>
 														<?php $coption = get_sub_field('content_options'); if($coption == "text") { ?>
 														<div class="columnContent"><?php the_sub_field('column_2_text'); ?></div>
 														<?php } else { ?>
+														
 														<?php			if (class_exists('EM_Events')) {
 															echo EM_Events::output( array('limit'=>4,'orderby'=>'event_start_date','category'=>'5') );
 														} ?>
+														
 
 														<?php } ?>
 														

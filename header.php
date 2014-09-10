@@ -134,6 +134,7 @@ $current_colorscheme = $options['link_color'];
 <div class="sideBarNav">
 			<a href="#" class="sideBarClose"><?php include("img/closebutton.svg"); ?> Close Menu</a>
 			<nav id="site-navigation" class="main-navigation" role="navigation">
+				
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</nav>
 
@@ -262,11 +263,25 @@ $url = $thumb['0']; ?>
 
 
 			<nav id="access" role="navigation">
+
 				<a href="#" class="menuTrigger"><?php include("img/menuicon.svg"); ?> Menu</a>
 
 
 				<div class="headeroverlay">
+					<?php $menu = wp_nav_menu(
+					    array (
+					        'echo' => FALSE,
+					        'theme_location' => 'anchored',
+					        'fallback_cb' => '__return_false'
+					    )
+					);
 
+					if ( ! empty ( $menu ) )
+					{
+					    echo '<div class="navmain2">' . $menu . '</div>';
+					} ?>
+
+					
 
 				<div class="mobileScrollTop"></div>
 				<div class="centerfix relative">
