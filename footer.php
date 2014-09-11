@@ -47,11 +47,13 @@
         </div>
 
         <div class="socialRef">
-			<a href="https://twitter.com/UWMadisonCALS" title="Follow Us on Twitter" class="twitter">Twitter</a>
+
+        	<a href="#" class="feedbackbutton">Give us feedback</a>
+			<!--<a href="https://twitter.com/UWMadisonCALS" title="Follow Us on Twitter" class="twitter">Twitter</a>
 			<a href="http://www.flickr.com/photos/uwmadisoncals/" title="View our photostream" class="flickr">Flickr</a>
 			<a href="http://www.linkedin.com/groups?gid=5062996" class="linkedin">LinkedIn</a>
 			<a href="http://www.youtube.com/user/UWMadisonCALS" title="Our latest videos" class="youtube">Youtube</a>
-			<a href="https://www.facebook.com/UWMadisonCALS" title="Like us on Facebook" class="facebook">Facebook</a>
+			<a href="https://www.facebook.com/UWMadisonCALS" title="Like us on Facebook" class="facebook">Facebook</a>-->
 
 		</div>
 			<div class="clearfix"></div>
@@ -69,7 +71,12 @@
 	</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+
+
 </div>
+
+
 <?php wp_footer(); ?>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/imagelightbox.js"></script>
  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/min/master.min.js"></script>
@@ -85,6 +92,7 @@
 
 
 </script>
-
+<div class="feedbackForm" style="display: none;"><?php gravity_form("feedback", $display_title=false, $display_description=false, $display_inactive=false, $field_values=null, $ajax=true, $tabindex); ?></div>
+<div class="feedbackformoverlay" style="display: none;"></div> 
 </body>
 </html>

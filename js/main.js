@@ -90,6 +90,12 @@ jQuery( document ).ready(function( $ ) {
     //fixchromeGlitch();
   });
 
+  $(".feedbackbutton").click(function(e) {
+    e.preventDefault();
+    $(".feedbackForm").addClass("showForm");
+    $(".feedbackformoverlay").addClass("showForm");
+  });
+
 
 
 });
