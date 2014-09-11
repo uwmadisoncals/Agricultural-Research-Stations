@@ -96,6 +96,12 @@ jQuery( document ).ready(function( $ ) {
     $(".feedbackformoverlay").addClass("showForm");
   });
 
+  $(".feedbackformoverlay").click(function(e) {
+    e.preventDefault();
+    $(".feedbackForm").removeClass("showForm");
+    $(".feedbackformoverlay").removeClass("showForm");
+  });
+
 
 
 });

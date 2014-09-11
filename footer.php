@@ -92,7 +92,7 @@
 
 
 </script>
-<div class="feedbackForm" style="display: none;"><?php gravity_form("feedback", $display_title=false, $display_description=false, $display_inactive=false, $field_values=null, $ajax=true, $tabindex); ?></div>
+<div class="feedbackForm" style="display: none;"><?php gravity_form("Feedback", $display_title=false, $display_description=false, $display_inactive=false, $field_values=null, $ajax=true, $tabindex); ?></div>
 <div class="feedbackformoverlay" style="display: none;"></div> 
 </body>
 </html>
