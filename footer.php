@@ -78,20 +78,15 @@
 
 
 <?php wp_footer(); ?>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/imagelightbox.js"></script>
+
  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/min/master.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/menu.js"></script>
 
-<script>
-
-    $( function()
-    {
-        $( 'a' ).imageLightbox();
-    });
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/imagelightbox.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/lightboxinit.js"></script>
 
 
-</script>
 <div class="feedbackForm" style="display: none;"><?php gravity_form("Feedback", $display_title=false, $display_description=false, $display_inactive=false, $field_values=null, $ajax=true, $tabindex); ?></div>
 <div class="feedbackformoverlay" style="display: none;"></div> 
 </body>
