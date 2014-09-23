@@ -177,7 +177,7 @@
 
 		//	WITH ARROWS & ACTIVITY INDICATION
 
-		var selectorG = '.gallery a';
+		var selectorG = '.gallery a, .tiled-gallery a';
 		var instanceG = $( selectorG ).imageLightbox(
 		{
 			onStart:		function(){ arrowsOn( instanceG, selectorG ); },
