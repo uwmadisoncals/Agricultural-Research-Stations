@@ -207,7 +207,9 @@ html
 		}
 		.imagelightbox-arrow:active
 		{
-			background-color: #111;
+			background: #111;
+			background: rgba( 255, 255, 255, .35 );
+			border-top: none;
 		}
 			.imagelightbox-arrow-left
 			{
