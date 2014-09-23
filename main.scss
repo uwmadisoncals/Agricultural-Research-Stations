@@ -117,6 +117,36 @@ a.button.blue{
 	margin-bottom: 1em;
 }
 
+/*.gform_body .ginput_complex {
+	.ginput_left {
+		display: block;
+		float: left;
+		width: 40%;
+	}
+
+	.ginput_right {
+		display: block;
+		float: right;
+		width: 40%;
+	}
+
+	span {
+		position: relative;
+
+
+		label {
+			display:inline-block;
+			
+			
+		}
+
+		input {
+			display: block;
+			float: right;
+		}
+	}
+}*/
+
 .feedbackformoverlay {
 	position: fixed;
 	top: 0px;

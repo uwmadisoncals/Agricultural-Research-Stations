@@ -4,7 +4,9 @@
 					
 
 						<ul class="locationList2">
+							<li><a href="/ars">Administration</a></li>
 							<li><a href="/arlingtonars">Arlington</a></li>
+							<li><a href="/walnutstreetgreenhouse">CALS Greenhouses</a></li>
 							<li><a href="/dairyforage">Dairy Forage</a></li>
 							<li><a href="/hancockars">Hancock</a></li>
 							<li><a href="/kemp">Kemp</a></li>
@@ -14,8 +16,6 @@
 							<li><a href="/peninsularars">Peninsular</a></li>
 							<li><a href="/rhinelanderars">Rhinelander</a></li>
 							<li><a href="/spoonerars">Spooner</a></li>
-							<li><a href="/westmadisonars">Administration</a></li>
-							<li><a href="/walnutstreetgreenhouse">CALS Greenhouses</a></li>
 							<li><a href="/westmadisonars">West Madison</a></li>
 						</ul>
 					</div>
