@@ -407,12 +407,12 @@ a.button.blue{
 
 .feedbackForm {
 	position: fixed;
-	top: 20%;
-	bottom: 20%;
+	top: 10%;
+	bottom: 15%;
 	left: 20%;
 	right: 20%;
 	z-index: 20;
-	background: #fff;
+	background: #ECEAEA;
 	min-height: 20px;
 	transition: 0.4s;
 	padding: 2em;
@@ -427,6 +427,27 @@ a.button.blue{
 
 .gform_body ul li {
 	margin-bottom: 1em;
+}
+
+.gform_body .ginput_complex{
+
+	.ginput_right{
+		//margin-left:1em;
+	}
+	
+	span{
+		label{
+			padding-left: .5em;
+			padding-right: .5em;
+		}
+	}
+	/*span{
+		label {
+			position:absolute;
+			margin-left:-12em;
+			margin-top: 2.1em;
+		}
+	}*/
 }
 
 /*.gform_body .ginput_complex {
@@ -468,7 +489,8 @@ a.button.blue{
 	z-index: 19;
 	background: rgba(0,0,0,0.5);
 	min-height: 20px;
-	transition: 0.4s;
+	//transition: 0.4s;
+
 }
 
 
@@ -567,6 +589,7 @@ div.contrastmask2 {
 .single #content, .page #content, .search-results #content, .archive #content, .error404 #content, .search-no-results #content {
 	box-shadow: none !important;
 	border-radius: 2px !important;
+	background: rgba(255, 255, 255, 0.83) !important;
 }
 
 .mapList ul, .mapList li, .mapGraphic ul, .mapGraphic li {
