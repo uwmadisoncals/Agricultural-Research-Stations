@@ -28,7 +28,7 @@ get_header(); ?>
 					<?php //comments_template( '', true ); ?>
 
 				<?php endwhile; // end of the loop. ?>
-			<iframe src="https://devapps.cals.wisc.edu/cals_web_forms/kemps_reservation_forms/new" height="2500" width="100%" scrolling="no" seamless></iframe>
+			<iframe src="https://apps.cals.wisc.edu/cals_web_forms/kemps_reservation_forms/new" height="2500" width="100%" scrolling="no" seamless></iframe>
 			</div><!-- #content -->
 
 			<?php get_sidebar(); ?>

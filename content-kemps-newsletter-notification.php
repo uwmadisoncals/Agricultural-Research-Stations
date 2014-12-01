@@ -22,7 +22,7 @@
 	<div class="entry-content">
 		<?php// the_content(); ?>
 		<p>send me an email notification when a new issue is available:</p>
-		<iframe src="https://devapps.cals.wisc.edu/cals_web_forms/kemps_point_notification_forms/new" height="700" width="100%" scrolling="no" seamless></iframe>
+		<iframe src="https://dapps.cals.wisc.edu/cals_web_forms/kemps_point_notification_forms/new" height="700" width="100%" scrolling="no" seamless></iframe>
 		<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'twentyeleven' ) . '</span>', 'after' => '</div>' ) ); ?>
 	</div><!-- .entry-content -->
 	<footer class="entry-meta">
