@@ -427,13 +427,25 @@ $url = $thumb['0']; echo $url;
 
   			<div class="featureCaption">
   				<div class="centered">
+
   				<h2><?php the_title(); ?></h2>
 
 	  				<div class="featuresubtitle">
 	  				<?php the_content_rss(); ?>
 	  				</div>
+
+	  					<?php 
+	  				$actionTitleObject = get_field_object("action_link_title");
+	  				$actionTitleValue = $actionTitleObject['value'];
 	  				
-	  				<a href="<?php the_field('action_link'); ?>" class="button blue"><?php the_field('action_link_title'); ?></a>
+	  				if($actionTitleValue):
+	  					?>
+	  					<a href="<?php the_field('action_link'); ?>" class="button blue"><?php the_field('action_link_title'); ?></a>
+	  					<?php
+	  				endif;
+	  				?>
+
+	  				
   				</div>
   			</div>
 
