@@ -6,7 +6,7 @@
 						<ul class="locationList2">
 							<li><a href="http://ars.wisc.edu">Administration</a></li>
 							<li><a href="http://arlington.ars.wisc.edu">Arlington</a></li>
-							<li><a href="http://greenhouse.ars.wisc.edu">CALS Greenhouses</a></li>
+							<li><a href="http://greenhouses.ars.wisc.edu">CALS Greenhouses</a></li>
 							<li><a href="http://dairyforage.ars.wisc.edu">Dairy Forage</a></li>
 							<li><a href="http://hancock.ars.wisc.edu">Hancock</a></li>
 							<li><a href="http://kemp.wisc.edu">Kemp</a></li>
