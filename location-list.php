@@ -4,19 +4,19 @@
 					
 
 						<ul class="locationList2">
-							<li><a href="/ars">Administration</a></li>
-							<li><a href="/arlingtonars">Arlington</a></li>
-							<li><a href="/walnutstreetgreenhouse">CALS Greenhouses</a></li>
-							<li><a href="/dairyforage">Dairy Forage</a></li>
-							<li><a href="/hancockars">Hancock</a></li>
-							<li><a href="/kemp">Kemp</a></li>
-							<li><a href="/lancasterars">Lancaster</a></li>
-							<li><a href="/marshfieldars">Marshfield</a></li>
-							<li><a href="/ojnoerars">O.J. Noer</a></li>
-							<li><a href="/peninsularars">Peninsular</a></li>
-							<li><a href="/rhinelanderars">Rhinelander</a></li>
-							<li><a href="/spoonerars">Spooner</a></li>
-							<li><a href="/westmadisonars">West Madison</a></li>
+							<li><a href="http://ars.wisc.edu">Administration</a></li>
+							<li><a href="http://arlington.ars.wisc.edu">Arlington</a></li>
+							<li><a href="http://greenhouse.ars.wisc.edu">CALS Greenhouses</a></li>
+							<li><a href="http://dairyforage.ars.wisc.edu">Dairy Forage</a></li>
+							<li><a href="http://hancock.ars.wisc.edu">Hancock</a></li>
+							<li><a href="http://kemp.wisc.edu">Kemp</a></li>
+							<li><a href="http://lancaster.ars.wisc.edu">Lancaster</a></li>
+							<li><a href="http://marshfield.ars.wisc.edu">Marshfield</a></li>
+							<li><a href="http://ojnoer.ars.wisc.edu">O.J. Noer</a></li>
+							<li><a href="http://peninsular.ars.wisc.edu">Peninsular</a></li>
+							<li><a href="http://rhinelander.ars.wisc.edu">Rhinelander</a></li>
+							<li><a href="http://spooner.ars.wisc.edu">Spooner</a></li>
+							<li><a href="http://westmadison.ars.wisc.edu">West Madison</a></li>
 						</ul>
 					</div>
 					</div>
