@@ -15,6 +15,7 @@
 		<div class="ieFooter">
 		<div class="inner">
 			<div id="pre-footer">
+
 			<div class="linksContainer">
 			<h3>Resources</h3>
         	<ul id="quick_links">
@@ -29,12 +30,35 @@
             <div class="clearfix"></div>
 			</div>
 
-			<div class="linksContainer right">
+			<div class="footerWidgetArea linksContainer right">
+
+				<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('footer_widget_area')) : else: ?>
+
+				<?php  
+
+				if ( is_user_logged_in() ) :
+
+					?> 
+				<span><a class="widgetEditLink" href="<?php echo admin_url() . 'widgets.php' ?>">Edit</a></span>
+
+				<?php
+				else :
+				
+				endif; 
+
+				
+
+				endif; ?>
+
+			</div><!-- END footerWidgetArea-->
+
+
+			<!--<div class="linksContainer right">
 				<h3>Contact Us</h3>
 				<p>The headquarters for the Agricultural Research Stations is located in Arlington, Wisconsin on the Arlington Agricultural Research Station.</p>
 
 				<p class="address">Agricultural Research Station Headquarters | N695 Hopkins Rd | Arlington WI 53911 | 608.846.3750 | <a href="mailto:ars@cals.wisc.edu">ars@cals.wisc.edu</a></p>
-			</div>
+			</div> -->
 			<div class="clearfix"></div>
         </div>
 
