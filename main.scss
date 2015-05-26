@@ -1011,6 +1011,16 @@ border-bottom-left-radius: 2px;
 
 }
 
+.lockedNav {
+	width: 100%;
+	background: rgba(255,255,255,0.6);
+	
+	.lockedNavWrapper {
+	 width: 980px;
+	 margin: 0 auto;	
+	}
+}
+
 #page #branding #access.fixedNav {
 	position:fixed;
 	top: 0px;
@@ -1071,17 +1081,11 @@ border-bottom-left-radius: 2px;
 }
 
 #access ul {
-	float: right;
+	/*float: right;*/
 }
 
 #page #branding #access {
-	float: none;
-	position: absolute;
-	top: 20px;
-	right: 0px;
-	box-shadow: none !important;
-	width: 50%;
-	z-index:3;
+
 }
 
 .logoImage {
@@ -1096,7 +1100,7 @@ border-bottom-left-radius: 2px;
 }
 
 #page #branding .headeroverlay, #page #branding nav, .sideBarNav .main-navigation {
-	background: transparent;
+	background: rgba(255,255,255,0.4);
 
 }
 
@@ -1130,7 +1134,7 @@ border-bottom-left-radius: 2px;
 	margin-top: 40px;
 }
 
-nav#access ul li a:link, nav#access ul li a:visited {
+/*nav#access ul li a:link, nav#access ul li a:visited {
 	color: rgba(255,255,255,0.9);
 	border: 1px solid rgba(255,255,255,0.0);
 	-webkit-box-sizing: border-box;
@@ -1211,7 +1215,7 @@ nav#access a:focus {
 	margin-left: 0px;
 	margin-right: 0px;
 
-}
+}*/
 
 
 div.navWrapper .menu {
@@ -1261,7 +1265,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .home .collegeFeature li .featureCaption, .home .iosSlider .featureCaption {
 	bottom: 300px !important;
-	text-align: center;
+	text-align: left;
 }
 
 .collegeFeature li .featureCaption h2, .iosSlider h2 {
@@ -1271,7 +1275,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 .featuresubtitle {
 	max-width: 400px;
-	margin: 0 auto;
+	
 }
 
 
@@ -1366,6 +1370,7 @@ div#page {
 }
 
 .locationListHeader {
+	display: none;
   	position: relative;
 	
 	z-index: 20;
