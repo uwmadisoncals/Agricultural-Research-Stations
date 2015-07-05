@@ -204,7 +204,11 @@ $url = $thumb['0']; ?>
 <div class="mobileScroll">
 
 <a href="#" class="mobileNavTriggerLarge" style="display: none;"></a>
+
+
 <a href="#" class="mobileNavTrigger" aria-hidden="true">Navigation</a>
+
+
 <div class="ieWarning" style="display: none;">
 	<h1>It appears you have adjusted your browser to force compatibility mode.  You will have a less than optimal experience when viewing this site as it was designed with modern web standards in mind.</h1>
 	<p>To allow this site to behave normally, turn this off by pressing <strong>alt</strong> then click <strong>Tools</strong> and then <strong>Compatibility View Settings</strong>.  If you uncheck <strong>Display all websites in compatibility view</strong> your browser will be restored to its default behavior for compatibility mode.</p>
@@ -263,10 +267,15 @@ $url = $thumb['0']; ?>
 
 
 			<nav id="access" role="navigation">
-
-				<!--<a href="#" class="menuTrigger"><?php include("img/menuicon.svg"); ?> Menu</a>-->
-
+				<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' ); ?>
+	
+				<?php if($side_nav_settings == "simple-nav") { ?>
+						<a href="#" class="menuTrigger"><?php include("img/menuicon.svg"); ?> Menu</a>
+				<?php } else { ?>
+						
 				
+				
+				<?php } ?>
 
 				<div class="headeroverlay">
 					<?php $menu = wp_nav_menu(
@@ -292,7 +301,39 @@ $url = $thumb['0']; ?>
 				<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to primary content', 'twentyeleven' ); ?></a></div>
 				<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'twentyeleven' ); ?>"><?php _e( 'Skip to secondary content', 'twentyeleven' ); ?></a></div>
 				<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
+				
+				<?php if($side_nav_settings == "simple-nav") { ?>
+					<style>
+						
+						.headeroverlay {
+							display: none;
+						}
+						
+						#access {
+							float: right;
+							width: auto;
+							background: transparent !important;
+							box-shadow: none;
+							position: absolute;
+							top: 8px;
+							right: 0px;
+							z-index:3;
+						}
+						
+						#page #branding .headeroverlay, #page #branding nav, .sideBarNav .main-navigation {
+							background: transparent;
+						}
+					</style>
+				<?php } else { ?>
+						
+				
+				
+				
+				
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+				
+				<?php } ?>
+				
 				<!-- The markup of the navigation if it is hard coded -->
 				<!--<ul class="clearfix">
 			  		<li><a href="#">Students</a></li>
@@ -355,11 +396,18 @@ $pages = get_pages();
 			?>
 				<?php get_search_form(); ?>
 			<?php endif; ?>
+			
+			
 				</div>
 
 
 				</div>
+				
 			</nav><!-- #access -->
+			
+			<?php if($side_nav_settings != "simple-nav") { ?>
+			
+			
 			
 			<div class="addressInformation">
 				<div>N695 Hopkins Rd</div>
@@ -367,6 +415,8 @@ $pages = get_pages();
 				<div>608.846.3750</div>
 				<div><a href="mailto:ars@cals.wisc.edu">ars@cals.wisc.edu</a></div>
 			</div>
+			
+			<?php } ?>
 
 
 <div class="headingbg clearfix"></div>

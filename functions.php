@@ -1,5 +1,67 @@
 <?php
 
+
+/**** Adding Theme Customizer Options ****/
+function mytheme_customize_register( $wp_customize ) {
+   //All our sections, settings, and controls will be added here
+   
+   /**
+ * Pages Drop-Down List
+ *
+ * Since NARGA v1.6
+ */
+
+
+
+// Adding option to choose simple or expanded sidebar nav
+$wp_customize->add_section( 'twentyeleven-sidebar-options' , array(
+    	'title'      => __( 'Navigation Style', 'twentyeleven' ),
+    	'priority'   => 60,
+	) ); 
+
+$wp_customize->add_setting('twentyeleven_sidebar_options_id', array(
+    'capability'     => 'edit_theme_options',
+    'type'           => 'option',
+    'default'		 => 'simple-nav',
+    'sanitize_callback' => 'sanitize_sidebar_nav'
+ 
+));
+
+ 
+$wp_customize->add_control('twentyeleven-sidebar-options', array(
+    'label'      => __('Navigation Style', 'twentyeleven'),
+    'section'    => 'twentyeleven-sidebar-options',
+    'type'    => 'radio',
+    'choices' => array(
+            'simple-nav' => __( 'Simple Navigation', 'twentyeleven' ),
+            'expanded-nav' => __( 'Expanded Navigation', 'twentyeleven' )
+        ),
+    'settings'   => 'twentyeleven_sidebar_options_id',
+));
+
+
+function sanitize_page_feature( $value ) {
+    if ( !$value )
+        $value = '-Select-';
+ 
+    return $value;
+}
+
+function sanitize_sidebar_nav( $value ) {
+    if ( !$value )
+        $value = 'simple';
+ 
+    return $value;
+}
+   
+   
+
+
+}
+add_action( 'customize_register', 'mytheme_customize_register' );
+
+
+
 register_nav_menu( 'anchored', __( 'Anchored Menu', 'twentyeleven' ) );
 
 
