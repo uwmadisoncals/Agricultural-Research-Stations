@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Home Page
+ * Template Name: Home Page - for ARS Central
  *
  * Description: Twenty Twelve loves the no-sidebar look as much as
  * you do. Use this page template to remove the sidebar from any page.
@@ -34,100 +34,145 @@ get_header(); ?>
 				<div class="span-50">
 					<h2 class="sectionHeading first"><svg enable-background="new 0 0 32 32" height="32px" id="svg2" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="background"><rect fill="none" class="mapPinInner" height="32" width="32"/></g><g id="news_1_"><path d="M4,14h20v-2H4V14z M15,26h7v-2h-7V26z M15,22h9v-2h-9V22z M15,18h9v-2h-9V18z M4,26h9V16H4V26z M28,10V6H0v22c0,0,0,4,4,4   h25c0,0,3-0.062,3-4V10H28z M4,30c-2,0-2-2-2-2V8h24v20c0,0.921,0.284,1.558,0.676,2H4z"/></g></svg> New at ARS</h2>
 
-					<?php while ( have_posts() ) : the_post(); ?>
-									<?php
+					<div class="box videos dropin">
 
-					// check if the flexible content field has rows of data
-					if( have_rows('highlight_columns') ):
-
-							// loop through the rows of data
-							while ( have_rows('highlight_columns') ) : the_row();
-
-									if( get_row_layout() == '3_column_row' ): ?>
-
-										<div class="row clearfix">
-
-											<div class="span-33 dropin outlinebox">
-													<h3><?php the_sub_field('column_1_title'); ?></h3>
-										<?php the_sub_field('column_1'); ?>
-											</div>
-
-											<div class="span-33 dropin3 outlinebox">
-												<h3><?php the_sub_field('column_2_title'); ?></h3>
-										<?php the_sub_field('column_2'); ?>
-											</div>
-
-											<div class="span-33 dropin2 outlinebox">
-													<h3><?php the_sub_field('column_3_title'); ?></h3>
-										<?php the_sub_field('column_3'); ?>
-											</div>
-
-										</div>
-
-									<?php endif;
+							<h2>News</h2>
 
 
-									if( get_row_layout() == '2_column_row' ): ?>
+<?php query_posts("category_name=news&posts_per_page=1"); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post();  ?>
+  							<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 
-										<div class="row clearfix">
+  <?php	if ( has_post_thumbnail() ) {
 
-											<div class="span-100 dropin outlinebox" style="
-											<?php $attachment_id = get_sub_field('column_1_image_1'); 
-			$size = 'small';
-			$image = wp_get_attachment_image_src($attachment_id, $size);
-			
-			if ( $image ) { ?>
-						
-		    				<?php echo "background: url('".$image[0]."') no-repeat; background-position: center center; background-size: cover;"; ?>
-		    				 
-		    			<?php } ?> "><div class="imageOverlay"></div>
-		    			
-		    			<div class="boxContent">
-													<h3><?php the_sub_field('column_1_title_1'); ?></h3>
-													<?php the_sub_field('column_1_text'); ?>
-		    			</div>
-											</div>
+		    				//the_post_thumbnail();
+		    				echo get_the_post_thumbnail($page->ID, 'large');
 
-							<div class="span-100 dropin outlinebox" style="
-											<?php $attachment_id = get_sub_field('column_2_image_1'); 
-			$size = 'small';
-			$image = wp_get_attachment_image_src($attachment_id, $size);
-			
-			if ( $image ) { ?>
-						
-		    				<?php echo "background: url('".$image[0]."') no-repeat; background-position: center center; background-size: cover;"; ?>
-		    				 
-		    			<?php } ?> "><div class="imageOverlay"></div>
-												<div class="boxContent">
-												<h3><?php the_sub_field('column_2_title_1'); ?></h3>
-														<?php if(get_sub_field('content_options') == "text") { ?>
-														<?php the_sub_field('column_2_text'); ?>
-														<?php } else { ?>
-														<?php			if (class_exists('EM_Events')) {
-															echo EM_Events::output( array('limit'=>4,'orderby'=>'event_start_date','category'=>'5') );
-														} ?>
+		    				} else {
 
-														<?php } ?>
-														</div>
-											</div>
+
+		    				$url = get_the_content();
+
+		    				//$url = linkifyYouTubeURLs($content);
+		    				//echo $url;
+							
+							 //echo '<img src="';
+							
+							 echo catch_that_image();
+							//echo '" alt="" />';
+
+						} ?>
+			<div class="boxContent">
+											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
+											<p><?php the_time('l, F jS, Y') ?></p>
+                                             </div>
+                            <div class="topShade"></div>
+							<div class="bottomShade"></div>
 
 
 
-										</div>
 
-									<?php endif;
 
-							endwhile;
 
-					else :
+<?php //restore_current_blog(); ?>
+<?php endwhile; ?>
+<?php endif; ?>
+<?php wp_reset_query(); ?>
+							<a href="<?php get_site_url(); ?>/category/news/" class="moreButton"><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg></a>
 
-							// no layouts found
 
-					endif;
+						<div class="windows8">
+							<div class="wBall" id="wBall_1">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_2">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_3">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_4">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_5">
+							<div class="wInnerBall">
+							</div>
+							</div>
+						</div>
 
-					?>
+						<div class="shade"></div>
 
-					<?php endwhile; // end of the loop. ?>
+					</div>
+						<div class="box dropin3">
+							<h2>Announcements</h2>
+
+
+<?php query_posts("category_name=announcements&posts_per_page=1"); ?>
+<?php if (have_posts()) : ?>
+  <?php while (have_posts()) : the_post();  ?>
+  					<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
+   <?php	if ( has_post_thumbnail() ) {
+
+		    				//the_post_thumbnail();
+		    				echo get_the_post_thumbnail($page->ID, 'large');
+
+		    				} else {
+							//echo "<img src='".get_template_directory_uri()."/images/newsplaceholder1.jpeg' alt=' '>";
+							 //echo '<img src="';
+							 echo catch_that_news_image();
+							// echo '" alt="" />';
+
+						} ?>
+			<div class="boxContent">
+											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
+											<p><?php the_time('l, F jS, Y') ?></p>
+                                             </div>
+                            <div class="topShade"></div>
+							<div class="bottomShade"></div>
+
+
+
+
+
+
+<?php //restore_current_blog(); ?>
+<?php endwhile; ?>
+<?php endif; ?>
+<?php wp_reset_query(); ?>
+							<a href="<?php get_site_url(); ?>/category/blog/" class="moreButton"><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg></a>
+
+
+						<div class="windows8">
+							<div class="wBall" id="wBall_1">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_2">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_3">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_4">
+							<div class="wInnerBall">
+							</div>
+							</div>
+							<div class="wBall" id="wBall_5">
+							<div class="wInnerBall">
+							</div>
+							</div>
+						</div>
+
+						<div class="shade"></div>
+					</div>
+
 				</div>
 
 				<div class="span-50 mapGraphic">

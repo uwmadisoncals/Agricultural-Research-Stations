@@ -360,6 +360,13 @@ $pages = get_pages();
 
 				</div>
 			</nav><!-- #access -->
+			
+			<div class="addressInformation">
+				<div>N695 Hopkins Rd</div>
+				<div>Arlington WI 53911</div>
+				<div>608.846.3750</div>
+				<div><a href="mailto:ars@cals.wisc.edu">ars@cals.wisc.edu</a></div>
+			</div>
 
 
 <div class="headingbg clearfix"></div>
@@ -427,6 +434,8 @@ $url = $thumb['0']; echo $url;
 
 
   			<div class="featureCaption">
+	  			
+	  			<?php edit_post_link( __( 'Change Header', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
   				<div class="centered">
 
   				<h2><?php the_title(); ?></h2>
@@ -434,18 +443,32 @@ $url = $thumb['0']; echo $url;
 	  				<div class="featuresubtitle">
 	  				<?php the_content_rss(); ?>
 	  				</div>
+	  				
+	  					<?php $hidebuttoncheck = get_field("hide_actionable_button");
+		  					 if($hidebuttoncheck == false) { 
+		  					
+	  					
 
-	  					<?php 
+	  					
+
+	  					
 	  				$actionTitleObject = get_field_object("action_link_title");
 	  				$actionTitleValue = $actionTitleObject['value'];
 	  				
 	  				if($actionTitleValue):
 	  					?>
+	  					
+	  					
 	  					<a href="<?php the_field('action_link'); ?>" class="button blue"><?php the_field('action_link_title'); ?></a>
+	  					
+	  					
+	  					
+	  					
 	  					<?php
 	  				endif;
 	  				?>
-
+	  				
+	  				<?php } ?>
 	  				
   				</div>
   			</div>

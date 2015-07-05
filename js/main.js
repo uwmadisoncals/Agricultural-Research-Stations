@@ -101,7 +101,29 @@ jQuery( document ).ready(function( $ ) {
     $(".feedbackForm").removeClass("showForm");
     $(".feedbackformoverlay").removeClass("showForm");
   });
+  
+  var menuWidth = $(".menu ul").width();
+  
+  function navFix() {
+	 var menuContainer = $(".menu").width();
+	 
+	 console.log(menuWidth + " " + menuContainer);
+	 
+	 if(menuWidth >= menuContainer) {
+		 console.log("use sidebar nav");
+		 
+	 } else {
+		 console.log("use horizontal nav");
+	 } 
+  }
+  
+  
+  $(window).resize(function() {
+	 
+	 navFix();
+	  
+  });
 
-
+  navFix();
 
 });
