@@ -49,7 +49,7 @@ function sanitize_page_feature( $value ) {
 
 function sanitize_sidebar_nav( $value ) {
     if ( !$value )
-        $value = 'simple';
+        $value = 'simple-nav';
  
     return $value;
 }
