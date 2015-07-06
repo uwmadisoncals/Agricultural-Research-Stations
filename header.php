@@ -270,8 +270,8 @@ $url = $thumb['0']; ?>
 				test text
 				<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' ); 
 					
-					if($side_nav_setting == "") {
-						$side_nav_setting = "simple-nav";
+					if($side_nav_settings == "") {
+						$side_nav_settings = "simple-nav";
 					}
 					
 					echo $side_nav_settings; ?>
