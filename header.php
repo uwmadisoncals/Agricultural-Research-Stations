@@ -267,8 +267,8 @@ $url = $thumb['0']; ?>
 
 
 			<nav id="access" role="navigation">
-				<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' ); ?>
-	
+				<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' ); echo$side_nav_settings; ?>
+					
 				<?php if($side_nav_settings == "simple-nav") { ?>
 						<a href="#" class="menuTrigger"><?php include("img/menuicon.svg"); ?> Menu</a>
 				<?php } else { ?>
