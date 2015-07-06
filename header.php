@@ -267,14 +267,14 @@ $url = $thumb['0']; ?>
 
 
 			<nav id="access" role="navigation">
-				test text
+				
 				<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' ); 
 					
 					if($side_nav_settings == "") {
 						$side_nav_settings = "simple-nav";
 					}
 					
-					echo $side_nav_settings; ?>
+					?>
 					
 				<?php if($side_nav_settings == "simple-nav") { ?>
 						<a href="#" class="menuTrigger"><?php include("img/menuicon.svg"); ?> Menu</a>
