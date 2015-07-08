@@ -112,22 +112,10 @@ get_header(); ?>
 							<h2>Events</h2>
 
 
-<?php query_posts("category_name=announcements&posts_per_page=1"); ?>
-<?php if (have_posts()) : ?>
-  <?php while (have_posts()) : the_post();  ?>
-  					<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-   <?php	if ( has_post_thumbnail() ) {
 
-		    				//the_post_thumbnail();
-		    				echo get_the_post_thumbnail($page->ID, 'large');
-
-		    				} else {
-							//echo "<img src='".get_template_directory_uri()."/images/newsplaceholder1.jpeg' alt=' '>";
-							 //echo '<img src="';
-							 echo catch_that_news_image();
-							// echo '" alt="" />';
-
-						} ?>
+						
+							<img src="<?php echo get_template_directory_uri(); ?>/images/newsplaceholder1.jpg" alt=" ">
+						
 			<div class="boxContent">
 											<?php if (class_exists('EM_Events')) {
 
@@ -143,11 +131,9 @@ get_header(); ?>
 
 
 
-<?php //restore_current_blog(); ?>
-<?php endwhile; ?>
-<?php endif; ?>
+
 <?php wp_reset_query(); ?>
-							<a href="<?php get_site_url(); ?>/category/blog/" class="moreButton"><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg></a>
+							<a href="<?php get_site_url(); ?>/events/" class="moreButton"><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg></a>
 
 
 						<div class="windows8">
