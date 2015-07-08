@@ -49,20 +49,12 @@ get_header(); ?>
 		    				//the_post_thumbnail();
 		    				echo get_the_post_thumbnail($page->ID, 'large');
 
-		    				} else {
+		    				} else { ?>
 
 
-		    				$url = get_the_content();
+		    				<img src="<?php echo get_template_directory_uri(); ?>/images/announcementsplaceholder1.jpg" alt=" ">
 
-		    				//$url = linkifyYouTubeURLs($content);
-		    				//echo $url;
-							
-							 //echo '<img src="';
-							
-							 echo catch_that_image();
-							//echo '" alt="" />';
-
-						} ?>
+						<?php } ?>
 			<div class="boxContent">
 											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
 											<p><?php the_time('l, F jS, Y') ?></p>
