@@ -39,7 +39,7 @@ get_header(); ?>
 							<h2>News</h2>
 
 
-<?php query_posts("category_name=news&posts_per_page=1"); ?>
+<?php query_posts("posts_per_page=1"); ?>
 <?php if (have_posts()) : ?>
   <?php while (have_posts()) : the_post();  ?>
   							<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
