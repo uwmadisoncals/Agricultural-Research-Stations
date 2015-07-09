@@ -260,7 +260,7 @@ $url = $thumb['0']; ?>
 			</a>
 			<?php endif; // end check for removed header image ?>
 
-
+ 
 			<?php get_template_part( "location", "list" ); ?> 
 			</hgroup>
 
