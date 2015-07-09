@@ -103,8 +103,9 @@ get_header(); ?>
 						<div class="box eventsBox">
 							<h2>Events</h2>
 
-
-
+							<?php if(is_user_logged_in()) { ?>
+							<span class="edit-link"><a href="<?php echo get_admin_url(); ?>edit.php?post_type=tribe_events " class="post-edit-link">Edit</a></span>
+							<?php } ?>
 						
 							<img src="<?php echo get_template_directory_uri(); ?>/images/newsplaceholder1.jpg" alt=" ">
 						
