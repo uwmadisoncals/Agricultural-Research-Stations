@@ -261,20 +261,26 @@ $url = $thumb['0']; ?>
 			<?php endif; // end check for removed header image ?>
 
  
-			<?php get_template_part( "location", "list" ); ?> 
-			</hgroup>
-
-
-
-			<nav id="access" role="navigation">
-				
-				<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' ); 
+			<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' ); 
 					
 					if($side_nav_settings == "") {
 						$side_nav_settings = "simple-nav";
 					}
 					
 					?>
+ 
+			<?php if($side_nav_settings == "simple-nav") { ?>
+ 
+			<?php get_template_part( "location", "list" ); ?> 
+			
+			<?php } ?>
+			</hgroup>
+
+
+
+			<nav id="access" role="navigation">
+				
+				
 					
 				<?php if($side_nav_settings == "simple-nav") { ?>
 						<a href="#" class="menuTrigger"><?php include("img/menuicon.svg"); ?> Menu</a>
