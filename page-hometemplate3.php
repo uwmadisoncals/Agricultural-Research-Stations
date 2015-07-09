@@ -108,12 +108,24 @@ get_header(); ?>
 						
 							<img src="<?php echo get_template_directory_uri(); ?>/images/newsplaceholder1.jpg" alt=" ">
 						
-			<div class="boxContent">
-											<?php if (class_exists('EM_Events')) {
+			<div class="boxContent eventDates">
+				<?php $events = tribe_get_events( array ('posts_per_page' => 3));
 
-											    echo EM_Events::output( array('limit'=>2,'orderby'=>'date') );
+// The result set may be empty
+if ( empty( $events ) ) {
+    echo 'Sorry, nothing found.';
+}
+
+// Or we may have some to show
+else foreach( $events as $event ) {
+	echo '<div class="eventEntry"><h3 class="spotlight_title">';
+    echo get_the_title( $event );
+    echo '</h3><p>';
+    echo tribe_get_start_date( $event );
+    echo '</p></div>';
+}  ?>
+					
 											
-											} ?>
                                              </div>
                             <div class="topShade"></div>
 							<div class="bottomShade"></div>
