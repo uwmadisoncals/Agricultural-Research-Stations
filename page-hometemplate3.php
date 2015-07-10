@@ -110,7 +110,7 @@ get_header(); ?>
 							<img src="<?php echo get_template_directory_uri(); ?>/images/newsplaceholder1.jpg" alt=" ">
 						
 			<div class="boxContent eventDates">
-				<?php $events = tribe_get_events( array ('posts_per_page' => 3));
+				<?php $events = tribe_get_events( array ('posts_per_page' => 3, 'eventDisplay' => 'upcoming'));
 
 // The result set may be empty
 if ( empty( $events ) ) {
@@ -119,9 +119,11 @@ if ( empty( $events ) ) {
 
 // Or we may have some to show
 else foreach( $events as $event ) {
-	echo '<div class="eventEntry"><h3 class="spotlight_title">';
+	echo '<div class="eventEntry"><h3 class="spotlight_title"><a href="';
+	echo tribe_get_events_link ( $event );
+	echo '">';
     echo get_the_title( $event );
-    echo '</h3><p>';
+    echo '</a></h3><p>';
     echo tribe_get_start_date( $event );
     echo '</p></div>';
 }  ?>
