@@ -2120,14 +2120,18 @@ div.collegeFeature li .featureCaption h2, .iosSlider h2 {
 	color: rgba(255,255,255,0.9);
 }
 
-div#tribe-events-pg-template {
+div#tribe-events {
 	max-width: 940px;
 	z-index:5;
 	position: relative;
-	margin-top: -430px;
-	background: rgba(255,255,255,0.9);
+	/*margin-top: -100px;*/
+	/*background: rgba(255,255,255,0.9);*/
 	border-radius: 3px;
 	margin-bottom: 40px;
+}
+
+.events-list #content div#tribe-events {
+	background: rgba(255,255,255,0.9);
 }
 
 .single-tribe_events div.tribe-events-event-image {
@@ -2142,6 +2146,6 @@ div#tribe-events-content {
 	width: 940px;
 }
 
-.single-tribe_events #content .hentry {
+.single-tribe_events #content .hentry, .events-list #content .hentry {
 	padding-top: 0px;
 }
