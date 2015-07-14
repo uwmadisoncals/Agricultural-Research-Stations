@@ -2119,3 +2119,13 @@ div.collegeFeature li .featureCaption h2, .iosSlider h2 {
 .eventsBox .boxContent {
 	color: rgba(255,255,255,0.9);
 }
+
+div#tribe-events-pg-template {
+	max-width: 940px;
+	z-index:5;
+	position: relative;
+	margin-top: -430px;
+	background: rgba(255,255,255,0.9);
+	border-radius: 3px;
+}
+
