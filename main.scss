@@ -2137,3 +2137,11 @@ div#tribe-events-pg-template {
 div#tribe-events-content {
 	padding: 30px;
 }
+
+.single div#content.fullWidth {
+	width: 940px;
+}
+
+.single-tribe_events #content .hentry {
+	padding-top: 0px;
+}
