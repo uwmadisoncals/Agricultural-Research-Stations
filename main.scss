@@ -2149,3 +2149,28 @@ div#tribe-events-content {
 .single-tribe_events #content .hentry, .events-list #content .hentry {
 	padding-top: 0px;
 }
+
+
+.navmain2 {
+	ul {
+		li {
+			a:link, a:visited {
+				color: rgba(255,255,255,0.8);
+			}
+		}
+	}
+}
+
+.featureCaption.centerText {
+	.centered {
+		text-align: center; 
+		h2, div.featuresubtitle {
+			text-align: center;
+			margin: 0 auto;
+		}
+		
+		a.button.blue {
+			margin: 0 auto;
+		}
+	}
+}

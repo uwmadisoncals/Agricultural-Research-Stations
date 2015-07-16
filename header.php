@@ -284,14 +284,7 @@ $url = $thumb['0']; ?>
 					
 				<?php if($side_nav_settings == "simple-nav") { ?>
 						<a href="#" class="menuTrigger"><?php include("img/menuicon.svg"); ?> Menu</a>
-				<?php } else { ?>
-						
-						
-				
-				<?php } ?>
-
-				<div class="headeroverlay">
-					<?php $menu = wp_nav_menu(
+							<?php $menu = wp_nav_menu(
 					    array (
 					        'echo' => FALSE,
 					        'theme_location' => 'anchored',
@@ -303,6 +296,16 @@ $url = $thumb['0']; ?>
 					{
 					    echo '<div class="navmain2">' . $menu . '</div>';
 					} ?>
+						<div class="headeroverlay">
+						
+				<?php } else { ?>
+						
+						<div class="headeroverlay">
+				
+				<?php } ?>
+
+				
+					
 
 					
 
@@ -495,8 +498,9 @@ $url = $thumb['0']; echo $url;
 
 
 
-
-  			<div class="featureCaption">
+						
+  			<div class="featureCaption <?php if($side_nav_settings == "simple-nav") { echo "centerText"; } ?>">
+	  					
 	  			
 	  			<?php edit_post_link( __( 'Change Header', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
   				<div class="centered">
