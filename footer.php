@@ -14,7 +14,13 @@
 	<footer id="colophon" role="contentinfo">
 		<div class="ieFooter">
 		<div class="inner">
-			<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' ); echo $side_nav_settings; ?>
+			<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' );
+				if($side_nav_settings == "") {
+						$side_nav_settings = "simple-nav";
+					}
+				
+				
+				 ?>
 			
 			
 			<?php if($side_nav_settings == "simple-nav") { ?>
