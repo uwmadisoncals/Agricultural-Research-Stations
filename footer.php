@@ -14,6 +14,13 @@
 	<footer id="colophon" role="contentinfo">
 		<div class="ieFooter">
 		<div class="inner">
+			
+			<?php if($side_nav_settings == "simple-nav") { ?>
+			
+			
+			
+			
+			
 			<div id="pre-footer">
 
 			<div class="linksContainer">
@@ -61,10 +68,24 @@
 			</div> -->
 			<div class="clearfix"></div>
         </div>
+        
+        <?php } else { ?>
+        
+        	<style>
+	        	footer .inner .copyright {
+		        	margin-top: 0px;
+	        	}
+	        	
+	        	footer .socialRef {
+		        	margin-top: 60px;
+	        	}
+        	</style>
+        
+        <?php } ?>
 
         <div class="copyright">
-        	<img src="<?php echo get_template_directory_uri(); ?>/images/footercrest2.png" alt="University of Wisconsin Madison" align="center" />
-        	<div>&copy;Copyright 2014 The Board of Regents of the University of Wisconsin System <a href="http://wisc.edu">University of Wisconsin-Madison</a></div>
+        	<img src="<?php echo get_stylesheet_directory_uri(); ?>/img/footercrest2.png" alt="University of Wisconsin Madison" align="center" />
+        	<div>&copy;Copyright 2015 The Board of Regents of the University of Wisconsin System <a href="http://wisc.edu">University of Wisconsin-Madison</a></div>
 
 
 
@@ -72,7 +93,7 @@
 
         <div class="socialRef">
 
-        	<a href="#" class="feedbackbutton">Give us feedback</a>
+        	<a href="#" class="feedbackbutton">Website Feedback</a>
 			<!--<a href="https://twitter.com/UWMadisonCALS" title="Follow Us on Twitter" class="twitter">Twitter</a>
 			<a href="http://www.flickr.com/photos/uwmadisoncals/" title="View our photostream" class="flickr">Flickr</a>
 			<a href="http://www.linkedin.com/groups?gid=5062996" class="linkedin">LinkedIn</a>
