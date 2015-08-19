@@ -14,11 +14,10 @@
 	<footer id="colophon" role="contentinfo">
 		<div class="ieFooter">
 		<div class="inner">
+			<?php $side_nav_settings = get_option( 'twentyeleven_sidebar_options_id' ); echo $side_nav_settings; ?>
+			
 			
 			<?php if($side_nav_settings == "simple-nav") { ?>
-			
-			
-			
 			
 			
 			<div id="pre-footer">
@@ -68,9 +67,12 @@
 			</div> -->
 			<div class="clearfix"></div>
         </div>
+
+			
+			
+			
         
         <?php } else { ?>
-        
         	<style>
 	        	footer .inner .copyright {
 		        	margin-top: 0px;
@@ -80,7 +82,9 @@
 		        	margin-top: 60px;
 	        	}
         	</style>
-        
+        	
+        	
+        	        
         <?php } ?>
 
         <div class="copyright">

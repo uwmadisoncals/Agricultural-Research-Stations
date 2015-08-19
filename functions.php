@@ -484,9 +484,9 @@ if(function_exists('register_sidebar')):
 	
 	register_sidebar( 
 		array(
-		'name'=>'Footer Widget Area',
+		'name'=>'Location Information',
 		'id'=>'footer_widget_area',
-		'description'=>'This is a widgetized area for the footer.',
+		'description'=>'An area of the site dedicated to showcasing your location information.',
 		'before_widget'=>'<div id="%1$s" class="widget %2$s">',
 		'after_widget'=>'</div>',
 		'before_title'=>'<h2>',

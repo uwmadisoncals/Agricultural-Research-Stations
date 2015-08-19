@@ -425,15 +425,33 @@ $pages = get_pages();
 			
 			
 			
-			<div class="addressInformation">
+			<!--<div class="addressInformation">
 				<div>N695 Hopkins Rd</div>
 				<div>Arlington WI 53911</div>
 				<div>608.846.3750</div>
 				<div><a href="mailto:ars@cals.wisc.edu">ars@cals.wisc.edu</a></div>
-			</div>
+			</div>-->
+			<div class="addressInformation">
+			<?php if(function_exists('dynamic_sidebar') && dynamic_sidebar('footer_widget_area')) : else: ?>
+
+				<?php  
+
+				if ( is_user_logged_in() ) :
+
+					?> 
+				<span><a class="widgetEditLink" href="<?php echo admin_url() . 'widgets.php' ?>">Edit</a></span>
+
+				<?php
+				else :
+				
+				endif; 
+
+				
+
+				endif; ?>
 			
 			<?php } ?>
-
+			</div>
 
 <div class="headingbg clearfix"></div>
 		</div>
