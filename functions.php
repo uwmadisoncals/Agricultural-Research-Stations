@@ -518,20 +518,37 @@ if(function_exists('register_sidebar')):
 		)
 	);
 	
-	register_sidebar(
-		array(
-		'name' => 'CALS News Feed',
-		'id'   => 'cals_news_feed_widget',
-		'description'   => 'Displays latest news from cals news feed.',
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4>',
-		'after_title'   => '</h4>'
-		)
-	);
-
 endif;
 
 }
 
 add_action('widgets_init', 'calsArs_widgets_init');
+
+// Alert User if WP-RSS-Retreiver plugin is not activated 
+add_action('admin_notices', 'showAdminMessages');
+
+function showAdminMessages()
+{
+	$plugin_messages = array();
+
+	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+
+	// Check if wp-rss-retriever is installed
+	if(!is_plugin_active( 'wp-rss-retriever/wp-rss-retriever.php' ))
+	{
+		$plugin_messages[] = 'This theme requires you to install and activate the WP RSS Retriever Plugin, <a href="mailto:websupport@cals.wisc.edu">contact CALS Web Support</a>.';
+	}
+
+
+	if(count($plugin_messages) > 0)
+	{
+		echo '<div id="message" class="error">';
+
+			foreach($plugin_messages as $message)
+			{
+				echo '<p><strong>'.$message.'</strong></p>';
+			}
+
+		echo '</div>';
+	}
+}

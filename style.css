@@ -19,11 +19,12 @@ Version:        0.1.0
 	margin-right: 0px;
 }
 
-/* Hide rss icon in cals news widget */
-div#newsfeed_container .widget_rss h4 a img{
-	display:none;
+/* wp rss retreiver */
+
+#newsfeed_container.boxContent{
+	position: absolute;
+	bottom:0px;
 }
-/* cals news widget */ 
-div#newsfeed_container .widget_rss ul{
-	list-style-type: none;
+.wp_rss_retriever{
+	
 }
