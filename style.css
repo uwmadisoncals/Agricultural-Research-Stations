@@ -10,3 +10,11 @@ Version:        0.1.0
 
 @import url("../calsmain2013/master.css");
 @import url("main.css");
+
+
+.one-column div#secondary {
+	float: right;
+	width: 230px;
+	margin-left: 0px;
+	margin-right: 0px;
+}

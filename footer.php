@@ -103,12 +103,12 @@
 
         <div class="socialRef">
 
-        	<a href="#" class="feedbackbutton">Website Feedback</a>
-			<!--<a href="https://twitter.com/UWMadisonCALS" title="Follow Us on Twitter" class="twitter">Twitter</a>
+        	<a href="#" class="feedbackbutton" style="margin-left: 20px;">Website Feedback</a>
+			<a href="https://twitter.com/UWMadisonCALS" title="Follow Us on Twitter" class="twitter">Twitter</a>
 			<a href="http://www.flickr.com/photos/uwmadisoncals/" title="View our photostream" class="flickr">Flickr</a>
 			<a href="http://www.linkedin.com/groups?gid=5062996" class="linkedin">LinkedIn</a>
 			<a href="http://www.youtube.com/user/UWMadisonCALS" title="Our latest videos" class="youtube">Youtube</a>
-			<a href="https://www.facebook.com/UWMadisonCALS" title="Like us on Facebook" class="facebook">Facebook</a>-->
+			<a href="https://www.facebook.com/UWMadisonCALS" title="Like us on Facebook" class="facebook">Facebook</a>
 
 		</div>
 			<div class="clearfix"></div>

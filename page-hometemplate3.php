@@ -104,13 +104,13 @@ get_header(); ?>
 							<h2>Events</h2>
 
 							<?php if(is_user_logged_in()) { ?>
-							<span class="edit-link"><a href="<?php echo get_admin_url(); ?>edit.php?post_type=tribe_events " class="post-edit-link">Edit</a></span>
+							<!--<span class="edit-link"><a href="<?php echo get_admin_url(); ?>edit.php?post_type=tribe_events " class="post-edit-link">Edit</a></span>-->
 							<?php } ?>
 						
 							<img src="<?php echo get_template_directory_uri(); ?>/images/newsplaceholder1.jpg" alt=" ">
 						
 			<div class="boxContent eventDates">
-				<?php $events = tribe_get_events( array ('posts_per_page' => 3, 'eventDisplay' => 'upcoming'));
+				<!--<?php $events = tribe_get_events( array ('posts_per_page' => 3, 'eventDisplay' => 'upcoming'));
 
 // The result set may be empty
 if ( empty( $events ) ) {
@@ -126,7 +126,9 @@ else foreach( $events as $event ) {
     echo '</a></h3><p>';
     echo tribe_get_start_date( $event );
     echo '</p></div>';
-}  ?>
+}  ?>-->
+
+			<?php uwmadison_events('http://www.today.wisc.edu/events/feed/30', array('limit' => 2)) ?>
 					
 											
                                              </div>
@@ -140,7 +142,7 @@ else foreach( $events as $event ) {
 
 
 <?php wp_reset_query(); ?>
-							<a href="<?php get_site_url(); ?>/arsevents/" class="moreButton"><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg></a>
+							<a href="http://www.today.wisc.edu/events/feed/30" class="moreButton"><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg></a>
 
 
 						<div class="windows8">

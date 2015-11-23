@@ -145,7 +145,20 @@ jQuery('#input_<?php echo $form['id']?>_<?php echo $field['id']?>').attr('placeh
 <?php
 }
 
-
+function blm_register_sidebars() {
+	register_sidebar(
+		array(
+			'id' => 'ars_location_home',
+			'name' => __( 'ARS Location Home', 'twentyeleven' ),
+			'description' => __( 'The following widgets will appear on your homepage if assigned.', 'twentyeleven' ),
+			'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+			'after_widget' => '</aside>',
+			'before_title' => '<h4>',
+			'after_title' => '</h4>'
+		)
+	);
+}
+blm_register_sidebars();
 
 
 if(function_exists("register_field_group"))
@@ -199,6 +212,14 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
+	
+	
+
+	
+	
+	
+	/*** old ***/
+	
 	register_field_group(array (
 		'id' => 'acf_home-page-columns',
 		'title' => 'Home Page Columns',
@@ -366,11 +387,14 @@ if(function_exists("register_field_group"))
 								'choices' => array (
 									'text' => 'Text',
 									'events' => 'Events',
+									'widget' => 'Widget',
 								),
 								'default_value' => '',
 								'allow_null' => 0,
 								'multiple' => 0,
 							),
+							
+							
 							array (
 								'key' => 'field_53a01f151d33f',
 								'label' => 'Column 2',

@@ -18,10 +18,9 @@ get_header(); ?>
 
 		<div id="primary">
 		
-			<div id="content" role="main" style="background: rgba(255,255,255,0.9); padding: 30px; border-radius: 3px; margin-bottom: 30px;">
+			<div id="content" role="main">
 
 				<?php while ( have_posts() ) : the_post(); ?>
-				<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
 
 					<?php get_template_part( 'content', 'page' ); ?>
 

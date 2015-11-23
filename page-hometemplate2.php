@@ -82,9 +82,12 @@ get_header(); ?>
 
 							<div class="span-50 dropin">
 												
-												<h2 class="sectionHeading"><?php the_sub_field('column_2_title_1'); ?></h2>
-														<?php $coption = get_sub_field('content_options'); if($coption == "text") { ?>
+										 		<h2 class="sectionHeading"><?php the_sub_field('column_2_title_1'); ?></h2>
+														<?php $coption = get_sub_field('content_options');  if($coption == "text") { ?>
 														<div class="columnContent"><?php the_sub_field('column_2_text'); ?></div>
+														
+														<?php } else if($coption == 'widget') { ?>
+																<?php get_sidebar( 'ars_location_home' ); ?>
 														<?php } else { ?>
 														
 														<?php			if (class_exists('EM_Events')) {
