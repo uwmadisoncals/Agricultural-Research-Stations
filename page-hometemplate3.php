@@ -34,72 +34,23 @@ get_header(); ?>
 				<div class="span-50">
 					<h2 class="sectionHeading first"><svg enable-background="new 0 0 32 32" height="32px" id="svg2" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="background"><rect fill="none" class="mapPinInner" height="32" width="32"/></g><g id="news_1_"><path d="M4,14h20v-2H4V14z M15,26h7v-2h-7V26z M15,22h9v-2h-9V22z M15,18h9v-2h-9V18z M4,26h9V16H4V26z M28,10V6H0v22c0,0,0,4,4,4   h25c0,0,3-0.062,3-4V10H28z M4,30c-2,0-2-2-2-2V8h24v20c0,0.921,0.284,1.558,0.676,2H4z"/></g></svg> New at ARS</h2>
 
-					<div class="box videos">
+					<div class="box videos"><!-- class="box videos" -->
+					
+						<div id="newsfeed_container">
 
-							<h2>News</h2>
+							<?php if (function_exists('dynamic_sidebar') && dynamic_sidebar('cals_news_feed_widget')) : else : ?>
 
-
-<?php query_posts("posts_per_page=1"); ?>
-<?php if (have_posts()) : ?>
-  <?php while (have_posts()) : the_post();  ?>
-  							<?php edit_post_link( __( 'Edit', 'twentyeleven' ), '<span class="edit-link">', '</span>' ); ?>
-
-  <?php	if ( has_post_thumbnail() ) {
-
-		    				//the_post_thumbnail();
-		    				echo get_the_post_thumbnail($page->ID, 'large');
-
-		    				} else { ?>
-
-
-		    				<img src="<?php echo get_template_directory_uri(); ?>/images/announcementsplaceholder1.jpg" alt=" ">
-
-						<?php } ?>
-			<div class="boxContent">
-											<h3 class="spotlight_title"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a> </h3>
-											<p><?php the_time('l, F jS, Y') ?></p>
-                                             </div>
-                            <div class="topShade"></div>
-							<div class="bottomShade"></div>
-
-
-
-
-
-
-<?php //restore_current_blog(); ?>
-<?php endwhile; ?>
-<?php endif; ?>
-<?php wp_reset_query(); ?>
-							<a href="<?php get_site_url(); ?>/category/news/" class="moreButton"><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/></svg></a>
-
-
-						<div class="windows8">
-							<div class="wBall" id="wBall_1">
-							<div class="wInnerBall">
+							<div class="pre-widget">
+								<p><strong>Widgetized Area</strong></p>
+								<p>This panel is active and ready for you to add some widgets via the WP Admin</p>
 							</div>
-							</div>
-							<div class="wBall" id="wBall_2">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_3">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_4">
-							<div class="wInnerBall">
-							</div>
-							</div>
-							<div class="wBall" id="wBall_5">
-							<div class="wInnerBall">
-							</div>
-							</div>
+
+							<?php endif; ?>
+
 						</div>
 
-						<div class="shade"></div>
+					</div><!-- END .box.videos -->
 
-					</div>
 						<div class="box eventsBox">
 							<h2>Events</h2>
 

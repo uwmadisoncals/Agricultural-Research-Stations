@@ -18,3 +18,12 @@ Version:        0.1.0
 	margin-left: 0px;
 	margin-right: 0px;
 }
+
+/* Hide rss icon in cals news widget */
+div#newsfeed_container .widget_rss h4 a img{
+	display:none;
+}
+/* cals news widget */ 
+div#newsfeed_container .widget_rss ul{
+	list-style-type: none;
+}

@@ -517,6 +517,18 @@ if(function_exists('register_sidebar')):
 		'after_title'=>'</h2>'
 		)
 	);
+	
+	register_sidebar(
+		array(
+		'name' => 'CALS News Feed',
+		'id'   => 'cals_news_feed_widget',
+		'description'   => 'Displays latest news from cals news feed.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>'
+		)
+	);
 
 endif;
 
