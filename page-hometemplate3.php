@@ -32,11 +32,11 @@ get_header(); ?>
 			<div class="row clearfix mapContainer">
 
 				<div class="span-50">
-					<h2 class="sectionHeading first"><svg enable-background="new 0 0 32 32" height="32px" id="svg2" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="background"><rect fill="none" class="mapPinInner" height="32" width="32"/></g><g id="news_1_"><path d="M4,14h20v-2H4V14z M15,26h7v-2h-7V26z M15,22h9v-2h-9V22z M15,18h9v-2h-9V18z M4,26h9V16H4V26z M28,10V6H0v22c0,0,0,4,4,4   h25c0,0,3-0.062,3-4V10H28z M4,30c-2,0-2-2-2-2V8h24v20c0,0.921,0.284,1.558,0.676,2H4z"/></g></svg> New at ARS</h2>
+					<h2 class="sectionHeading first"><svg enable-background="new 0 0 32 32" height="32px" id="svg2" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><g id="background"><rect fill="none" class="mapPinInner" height="32" width="32"/></g><g id="news_1_"><path d="M4,14h20v-2H4V14z M15,26h7v-2h-7V26z M15,22h9v-2h-9V22z M15,18h9v-2h-9V18z M4,26h9V16H4V26z M28,10V6H0v22c0,0,0,4,4,4   h25c0,0,3-0.062,3-4V10H28z M4,30c-2,0-2-2-2-2V8h24v20c0,0.921,0.284,1.558,0.676,2H4z"/></g></svg> News</h2>
 		
 
 					<div class="box videos" id="calsNewsBox"><!-- class="box videos"  -webkit-filter:opacity(.2); -->
-					<div style="background-image:url('<?php echo get_template_directory_uri();?>/images/announcementsplaceholder1.jpg');background-repeat:no-repeat;background-position:center;position:absolute;top:0;bottom:0;right:0;left:0;-webkit-filter:opacity(.6);z-index:-4; "></div>
+					<div style="background-image:url('<?php echo get_template_directory_uri();?>/images/announcementsplaceholder1.jpg');background-repeat:no-repeat;background-position:center;position:absolute;top:0;bottom:0;right:0;left:0;-webkit-filter:opacity(.5);z-index:-4; "></div>
 
 						<h2>CALS News</h2>
 						
