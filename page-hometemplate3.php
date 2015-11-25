@@ -36,7 +36,7 @@ get_header(); ?>
 		
 
 					<div class="box videos" id="calsNewsBox"><!-- class="box videos"  -webkit-filter:opacity(.2); -->
-					<div style="background-image:url('<?php echo get_template_directory_uri();?>/images/announcementsplaceholder1.jpg');background-repeat:no-repeat;background-position:center;position:absolute;top:0;bottom:0;right:0;left:0;-webkit-filter:opacity(.5);z-index:-4; "></div>
+					<div style="background-image:url('<?php echo get_template_directory_uri();?>/images/announcementsplaceholder1.jpg');background-repeat:no-repeat;background-position:center;position:absolute;top:0;bottom:0;right:0;left:0;opacity:0.5;-webkit-filter:opacity(.5);z-index:-4; "></div>
 
 						<h2>CALS News</h2>
 						
