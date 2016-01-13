@@ -80,7 +80,7 @@ else foreach( $events as $event ) {
     echo '</p></div>';
 }  ?>-->
 
-			<?php uwmadison_events('http://www.today.wisc.edu/events/feed/30', array('limit' => 2)) ?>
+			<?php uwmadison_events('http://www.today.wisc.edu/events/feed/272', array('limit' => 2)) ?>
 					
 											
                                              </div>
