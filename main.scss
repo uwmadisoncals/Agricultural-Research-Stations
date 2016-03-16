@@ -2093,6 +2093,19 @@ div.collegeFeature li .featureCaption h2, .iosSlider h2 {
 }
 
 
+.allarsevents {
+	background: rgba(255,255,255,0.15);
+	padding: 0.9em;
+	border-radius: 3px;
+}
+
+.localarsevents {
+	padding: 0.9em;
+	border-radius: 3px;
+	background: rgba(255,255,255,0.3)
+}
+
+
 @media only screen and (min-width : 100px) {
 	.row {
 		.span-50 {
