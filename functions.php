@@ -4,7 +4,7 @@
 /**** Adding Theme Customizer Options ****/
 function mytheme_customize_register( $wp_customize ) {
    //All our sections, settings, and controls will be added here
-   
+
    /**
  * Pages Drop-Down List
  *
@@ -17,17 +17,17 @@ function mytheme_customize_register( $wp_customize ) {
 $wp_customize->add_section( 'twentyeleven-sidebar-options' , array(
     	'title'      => __( 'Navigation Style', 'twentyeleven' ),
     	'priority'   => 60,
-	) ); 
+	) );
 
 $wp_customize->add_setting('twentyeleven_sidebar_options_id', array(
     'capability'     => 'edit_theme_options',
     'type'           => 'option',
     'default'		 => 'simple-nav',
     'sanitize_callback' => 'sanitize_sidebar_nav'
- 
+
 ));
 
- 
+
 $wp_customize->add_control('twentyeleven-sidebar-options', array(
     'label'      => __('Navigation Style', 'twentyeleven'),
     'section'    => 'twentyeleven-sidebar-options',
@@ -43,18 +43,18 @@ $wp_customize->add_control('twentyeleven-sidebar-options', array(
 function sanitize_page_feature( $value ) {
     if ( !$value )
         $value = '-Select-';
- 
+
     return $value;
 }
 
 function sanitize_sidebar_nav( $value ) {
     if ( !$value )
         $value = 'simple-nav';
- 
+
     return $value;
 }
-   
-   
+
+
 
 
 }
@@ -212,14 +212,14 @@ if(function_exists("register_field_group"))
 		),
 		'menu_order' => 0,
 	));
-	
-	
 
-	
-	
-	
+
+
+
+
+
 	/*** old ***/
-	
+
 	register_field_group(array (
 		'id' => 'acf_home-page-columns',
 		'title' => 'Home Page Columns',
@@ -393,8 +393,8 @@ if(function_exists("register_field_group"))
 								'allow_null' => 0,
 								'multiple' => 0,
 							),
-							
-							
+
+
 							array (
 								'key' => 'field_53a01f151d33f',
 								'label' => 'Column 2',
@@ -505,8 +505,8 @@ add_filter( 'body_class', 'add_slug_body_class' );
 function calsArs_widgets_init(){
 
 if(function_exists('register_sidebar')):
-	
-	register_sidebar( 
+
+	register_sidebar(
 		array(
 		'name'=>'Location Information',
 		'id'=>'footer_widget_area',
@@ -517,18 +517,18 @@ if(function_exists('register_sidebar')):
 		'after_title'=>'</h2>'
 		)
 	);
-	
+
 endif;
 
 }
 
 add_action('widgets_init', 'calsArs_widgets_init');
 
-// Alert User if WP-RSS-Retreiver plugin is not activated 
+/*
+// Alert User if WP-RSS-Retreiver plugin is not activated
 add_action('admin_notices', 'showAdminMessages');
 
-function showAdminMessages()
-{
+function showAdminMessages(){
 	$plugin_messages = array();
 
 	include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
@@ -551,4 +551,4 @@ function showAdminMessages()
 
 		echo '</div>';
 	}
-}
+}*/
