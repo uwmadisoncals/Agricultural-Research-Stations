@@ -2225,21 +2225,47 @@ div#tribe-events-content {
 			}
 		}	
 	}
+	
+
 }
 
-.uwmadison_events_container {
+.page {
+	.uwmadison_events_container {
 
-	ul.uwmadison_events {
-		li.uwmadison_event {
-			border-top: none;
-			border-bottom: 1px solid rgba(255,255,255,0.2);
-			
-			span.event-title-and-subtitle {
-				.uwmadison_event_subtitle {
-					color: rgba(255,255,255,0.9);
+		ul.uwmadison_events {
+			li.uwmadison_event {
+				border-top: none;
+				border-bottom: 1px solid rgba(0,0,0,0.2);
+				
+				span.event-title-and-subtitle {
+					.uwmadison_event_subtitle {
+						color: rgba(0,0,0,0.9);
+					}
 				}
 			}
 		}
+
+	}
+}
+
+.home {
+	
+
+	.uwmadison_events_container {
+	
+		ul.uwmadison_events {
+			li.uwmadison_event {
+				border-top: none;
+				border-bottom: 1px solid rgba(255,255,255,0.2);
+				
+				span.event-title-and-subtitle {
+					.uwmadison_event_subtitle {
+						color: rgba(255,255,255,0.9);
+					}
+				}
+			}
+		}
+	
 	}
 
 }
