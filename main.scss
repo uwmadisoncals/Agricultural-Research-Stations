@@ -2112,6 +2112,21 @@ div.collegeFeature li .featureCaption h2, .iosSlider h2 {
 	border-radius: 3px;
 	background: rgba(255,255,255,0.3);
 	margin-bottom: 1em;
+	
+	p {
+		strong {
+			a {
+				display: inline-block;
+				color: rgba(255,255,255,0.9) !important;
+				background: url("img/whitearrow.svg") no-repeat;
+				background-position: right center;
+				padding: 40px;
+				
+			}
+			
+			
+		}
+	}
 }
 
 
