@@ -2120,7 +2120,7 @@ div.collegeFeature li .featureCaption h2, .iosSlider h2 {
 				color: rgba(255,255,255,0.9) !important;
 				background: url("img/white_arrow.svg") no-repeat;
 				background-position: right center;
-				padding-right: 30px;
+				padding-right: 24px;
 				
 			}
 			
@@ -2213,6 +2213,17 @@ div#tribe-events-content {
 		a.button.blue {
 			margin: 0 auto;
 		}
+	}
+}
+
+.home {
+	.uwmadison_events_container {
+		.uwmadison_event_title {
+			a {
+				color: #fff;
+				text-decoration: underline;
+			}
+		}	
 	}
 }
 
