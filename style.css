@@ -87,6 +87,6 @@ a.wp_rss_retriever_readmore{
 	color:#deb846;
 }
 
-.expandLink {
-	display: none;
+a.expandLink {
+	display: none !important;
 }
