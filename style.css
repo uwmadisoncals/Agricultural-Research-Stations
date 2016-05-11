@@ -86,3 +86,7 @@ a.wp_rss_retriever_readmore{
 	font-size: 10px;
 	color:#deb846;
 }
+
+.expandLink {
+	display: none;
+}
